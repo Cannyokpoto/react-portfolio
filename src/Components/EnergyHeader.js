@@ -48,14 +48,14 @@ function Header(){
                         </div>
 
                         <ul className="mobile-navbar-items">
-                            <li><Link to="./index.html">Home</Link></li>
-                            <li><Link to="./about.html">About Us</Link></li>
-                            <li><Link to="./services.html">Services</Link></li>
-                            <li><Link to="./contact.html">Contact</Link></li>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/about">About Us</Link></li>
+                            <li><Link to="/services">Services</Link></li>
+                            <li><Link to="/contact">Contact</Link></li>
                         </ul>
 
                         <div className="engage">
-                            <Link to="./contact.html">Engage</Link>
+                            <Link to="/contact">Engage</Link>
                         </div>
                     </nav>
                 </header>
