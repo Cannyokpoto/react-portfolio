@@ -1,12 +1,14 @@
 import React from "react";
-import { Header } from '../EnergyHeader';
+import "./NoPage.css";
+import Header from '../Components/EnergyHeader';
 
 
 function NoPage(){
     return(
         <div>
             <Header />
-            <h2>Error 404: Not Found</h2>
+            <h3 className="myError">Error 404: Not Found</h3>
+            <p>Canny is currently working on it</p>
         </div>
     )
 }

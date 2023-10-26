@@ -1,51 +1,61 @@
 import "./EnergyMall.css";
 import React from "react";
+import { useRef } from "react";
 import PHOTOS from "./images/index";
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 //Header
 
 function Header(){
+
+    //Mobile Navbar
+
+    const navRef = useRef();
+
+    function Navbar(){
+            navRef.current.classList.toggle("mobile-navbar-open");
+        };
+
         return(
             <div>
                 <header>
                     <div className="logo">
-                        <i className="fas fa-bars" id="menu-btn"></i>
+                        <i className="fas fa-bars" id="menu-btn" onClick={Navbar}></i>
                         <img src={ PHOTOS.PHOTO10 } alt="logo" />
                     </div>
 
-                    {/* mobile-desktopNav */}
+                    {/* desktopNav navigation */}
 
                     <nav className="desktopNav">
                         <ul className="myNav">
-                            <li><a href="./index.html">Home</a></li>
-                            <li><a href="./about.html">About Us</a></li>
-                            <li><a href="./services.html">Services</a></li>
-                            <li><a href="./contact.html">Contact</a></li>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/about">About Us</Link></li>
+                            <li><Link to="/services">Services</Link></li>
+                            <li><Link to="/contact">Contact</Link></li>
                         </ul>
 
                         <div className="engage">
-                            <a href="/contact.html">Engage</a>
+                            <Link to="/contact.html">Engage</Link>
                         </div>
                     </nav>
 
                     {/* mobile-navigation */}
 
-                    <nav className="mobile-navbar" id="mobile-navbar">
+                    <nav className="mobile-navbar" id="mobile-navbar" ref={navRef}>
                         <div className="mobile-navbar-header">
-                            <i className="fas fa-times" id="close"></i>
+                            <i className="fas fa-times" id="close" onClick={Navbar}></i>
                         </div>
 
                         <ul className="mobile-navbar-items">
-                            <li><a href="./index.html">Home</a></li>
-                            <li><a href="./about.html">About Us</a></li>
-                            <li><a href="./services.html">Services</a></li>
-                            <li><a href="./contact.html">Contact</a></li>
+                            <li><Link to="./index.html">Home</Link></li>
+                            <li><Link to="./about.html">About Us</Link></li>
+                            <li><Link to="./services.html">Services</Link></li>
+                            <li><Link to="./contact.html">Contact</Link></li>
                         </ul>
 
                         <div className="engage">
-                            <a href="./contact.html">Engage</a>
+                            <Link to="./contact.html">Engage</Link>
                         </div>
                     </nav>
                 </header>
@@ -53,9 +63,9 @@ function Header(){
         )
 };
 
-//Mobile Navbar
 
 
+//mobile navigation
 
 // function Navbar(){
 //     const menu = document.getElementById('mobile-navbar');

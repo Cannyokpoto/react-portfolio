@@ -1,7 +1,8 @@
 import React from 'react';
-import { Header, Navbar, CurrentPage} from '../NextHeader';
-import { Container, reveal, leftAndRight } from '../NextContainer';
-import { Footer } from '../NextFooter';
+import '../Components/About.css';
+import Header from '../Components/EnergyHeader';
+import Footer from '../Components/EnergyFooter';
+import AboutContent from '../Components/AboutContent';
 
 
 class About extends React.Component{
@@ -9,7 +10,7 @@ class About extends React.Component{
         return(
             <div>
                 <Header />
-                <Container greater=">" />
+                <AboutContent />
                 <Footer />
             </div>
         )
