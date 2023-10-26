@@ -1,0 +1,1564 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+
+:root{
+    --energyRed: #DA1314;
+    --energyDarkRed: #540808;
+    --energyBlack: #000000;
+    --energyDarkBlue: #263640;
+    --energyGrey: #929A9F;
+    --energyLightGrey: #F5F8FA;
+    --energyWhite: #FFFFFF;
+    --boxShadow: 5px 5px 50px 5px rgb(245, 248, 250);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .5s linear;
+    scroll-behavior: smooth;
+}
+
+.mobile-navbar{
+    display: none;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: var(--energyWhite);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    overflow-x: hidden;
+}
+
+/* .App header p{
+    border: dashed red;
+} */
+
+
+header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--energyWhite);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+header .logo{
+    width: 20%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .logo img{
+    width: 50%;
+    height: 35px;
+}
+
+header .logo #menu-btn{
+    color: var(--myBlue);
+    font-size: 30px;
+    display: none;
+}
+
+
+header .desktopNav{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .desktopNav .myNav{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .desktopNav .myNav li{
+    list-style: none;
+}
+
+
+
+header .desktopNav .myNav li a{
+    color: var(--energyBlack);
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 5px;
+    position: relative;
+
+}
+
+header .desktopNav .myNav li a::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    background-color: var(--energyRed);
+    transition: all .3s;
+}
+
+header .desktopNav .myNav li a:hover::after{
+    width: 100%;
+}
+
+header .desktopNav .myNav li a.current::after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    background-color: var(--energyRed);
+}
+
+
+
+header .desktopNav .engage{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+header .desktopNav .engage a{
+    background-color: var(--energyRed);
+    color: var(--energyWhite);
+    width: 80%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 70px;
+}
+
+
+
+.main-container .hero-section{
+    width: 80vw;
+    height: 50vh;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section .left-hand-side{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+@keyframes heroLeft{
+    0%{transform: translateX(-100%);}
+    100%{transform: translateX(0);}
+}
+
+.hero-section .left-hand-side h3{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 2;
+    color: var(--energyGrey);
+    animation: heroLeft;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.hero-section .left-hand-side h1{
+    color: var(--energyDarkBlue);
+    animation: heroLeft;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.hero-section .left-hand-side a{
+    background-color: var(--energyRed);
+    color: var(--energyWhite);
+    width: 30%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 17px;
+    text-decoration: none;
+    border-radius: 3px;
+    padding: 0 5px 0 5px;
+    transition: all .5s;
+    animation: heroLeft;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+.hero-section .left-hand-side a:hover{
+    width: 23%;
+}
+
+.hero-section .left-hand-side a span{
+    animation: bounce infinite 1.5s linear;
+    font-size: 25px;
+}
+
+
+@keyframes bounce{
+    0%, to{
+            transform: translateX(0);
+    }
+    40% {
+        transform: translateX(-30px);
+    }
+    70%{
+        transform: translateX(-20%);
+    }
+    90%{
+        transform: translateX(0px);
+    }
+}
+
+
+.hero-section .right-hand-side{
+    width: 50%;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    position: relative;
+    top: 100px;
+}
+
+
+
+.hero-section .right-hand-side .empty{
+    position: relative;
+    width: 5%;
+    height: 100%;
+    background-color: var(--energyLightGrey);
+    z-index: -100;
+}
+
+.hero-section .right-hand-side .hero-image{
+    width: 70%;
+    height: 100%;
+    position: relative;
+    top: -70px;
+    overflow: hidden;
+    transition: all 1.3s;
+    z-index: 100;
+    box-shadow: var(--boxShadow);
+}
+
+.hero-section .right-hand-side .hero-image img{
+    width: 100%;
+    height: 100%;
+    box-shadow: var(--boxShadow);
+    transition: all 1.3s;
+    overflow: hidden;
+    animation: RotatePhoto;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes RotatePhoto{
+    0%{transform: rotate(-60deg);}
+    100%{transform: rotate(0deg);}
+}
+
+.hero-section .right-hand-side .hero-image img:hover{
+    transform: scale(1.2);
+}
+
+
+
+.main-container .main-wrapper{
+    width: 100%;
+    height: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--energyLightGrey);
+}
+
+.main-wrapper .what-we-offer{
+    width: 80%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+}
+
+.main-wrapper .what-we-offer h3{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--energyDarkBlue);
+}
+
+
+.main-wrapper .what-we-offer p{
+    width: 50%;
+    font-size: 17px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--energyGrey);
+}
+
+.main-wrapper .core-services{
+    width: 87%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-wrapper .core-services .service{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.main-wrapper .core-services .service img{
+    width: 100%;
+    height: 40%;
+    align-self: flex-start;
+}
+
+.main-wrapper .core-services .service h3{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--energyDarkBlue);
+    font-size: 23px;
+    padding-left: 30px;
+}
+
+.main-wrapper .core-services .service p{
+    width: 100%;
+    font-size: 17px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--energyGrey);
+    padding-left: 30px;
+}
+
+.main-wrapper .core-services .service a{
+    color: var(--energyRed);
+    width: 50%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.main-wrapper .core-services .service a:hover{
+    color: var(--energyDarkRed);
+    gap: 30px;
+}
+
+.main-container .previous{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 500px;
+    z-index: 100;
+    position: relative;
+    bottom: 200px;
+    background-color: var(--energyLightGrey);
+}
+
+.previous-contents{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: flex-start;
+    width: 90%;
+    height: 90%;
+    background-color: var(--energyDarkBlue);
+    padding-left: 80px;
+}
+
+.previous .previous-contents h5{
+    width: 50%;
+    color: var(--energyGrey);
+    font-size: 15px;
+}
+
+.previous .previous-contents h3{
+    width: 60%;
+    color: var(--energyLightGrey);
+    line-height: 1.5;
+    font-size: 25px;
+}
+
+.previous .previous-contents p{
+    font-size: 15px;
+    width: 60%;
+    line-height: 1.5;
+    color: var(--energyLightGrey);
+}
+
+.previous .previous-contents hr{
+    width: 60%;
+    height: 1px;
+    opacity: .2;
+    background-color: var(--energyLightGrey);
+    margin-top: 50px;
+}
+
+.previous .previous-contents a{
+    color: var(--energyLightGrey);
+    width: 25%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+
+.previous-image{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80%;
+    height: 550px;
+    position: relative;
+    bottom: 600px;
+    background-color: transparent;
+    z-index: 200;
+}
+
+.previous-image img{
+    width: 35%;
+    height: 100%;
+    
+}
+
+.main-container .our-blog{
+    width: 80%;
+    margin-top: -500px;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.our-blog h2{
+    color: var(--energyDarkBlue);
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.our-blog .user-blog{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.our-blog .user-blog p{
+    width: 45%;
+    font-size: 17px;
+    color: var(--energyGrey);
+}
+
+.our-blog .user-blog a{
+    background-color: var(--energyRed);
+    color: var(--energyWhite);
+    width: 15%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 17px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.our-blog .latest-blog-posts{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+
+.our-blog .latest-blog-posts h5{
+    text-transform: uppercase;
+    font-size: 17px;
+    color: var(--energyGrey);
+}
+
+.our-blog .latest-blog-posts .blog-posts{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.our-blog .latest-blog-posts .blog-posts .post{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+.our-blog .latest-blog-posts .blog-posts .post h3{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--energyDarkBlue);
+    font-size: 23px;
+}
+
+.our-blog .latest-blog-posts .blog-posts .post p{
+    width: 100%;
+    font-size: 17px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--energyGrey);
+}
+
+.our-blog .latest-blog-posts .blog-posts .post a{
+    color: var(--energyRed);
+    width: 50%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 17px;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.our-blog .latest-blog-posts .blog-posts .post a:hover{
+    color: var(--energyDarkRed);
+    gap: 30px;
+}
+
+.main-container .our-strength{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 60px;
+    align-items: center;
+    background-color: var(--energyLightGrey);
+    margin-top: 100px;
+}
+
+.our-strength .strength{
+    width: 40%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.our-strength .strength h5{
+    width: 50%;
+    color: var(--energyGrey);
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.our-strength .strength h3{
+    width: 60%;
+    color: var(--energyGrey);
+    line-height: 1.5;
+    font-size: 25px;
+}
+
+.our-strength .strength p{
+    font-size: 15px;
+    width: 60%;
+    line-height: 1.5;
+    color: var(--energyGrey);
+}
+
+.our-strength .strength a{
+    background-color: var(--energyRed);
+    color: var(--energyWhite);
+    width: 30%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: all .3s;
+    padding: 0 5px 0 5px;
+}
+
+.our-strength .strength a:hover{
+    gap: 30px;
+}
+
+.our-strength img{
+    width: 50%;
+    height: 450px;
+    position: relative;
+    top: -70px;
+}
+
+footer{
+    width: 100%;
+    height: 350px;
+    background-color: var(--energyDarkBlue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+footer .identity{
+    width: 85%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+}
+
+footer .identity img{
+    width: 15%;
+    height: 40px;
+}
+
+footer .identity .reach-us{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    height: 70px;
+}
+
+footer .identity .reach-us .contact{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-items: flex-start;
+    width: 50%;
+    height: 100%;
+}
+
+footer .identity .reach-us .contact h5{
+    font-size: 15px;
+    color: var(--energyLightGrey);
+    text-transform: uppercase;
+}
+
+footer .identity .reach-us .contact p{
+    font-size: 17px;
+    color: var(--energyLightGrey);
+}
+
+footer .identity .reach-us address{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 45%;
+    height: 100%;
+}
+
+footer .identity .reach-us address h5{
+    width: 69%;
+    text-align: left;
+    font-size: 15px;
+    color: var(--energyLightGrey);
+    text-transform: uppercase;
+}
+
+footer .identity .reach-us address p{
+    font-size: 17px;
+    color: var(--energyLightGrey);
+    width: 100%;
+    text-align: right;
+}
+
+footer hr{
+    width: 85%;
+    height: 1px;
+    opacity: .2;
+    background-color: var(--energyLightGrey);
+    margin-top: 30px;
+}
+
+footer .copy-right{
+    width: 85%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    font-size: 17px;
+    color: var(--energyLightGrey);
+    justify-content: center;
+}
+
+footer .copy-right span{
+    color: var(--energyRed);
+}
+
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1.7s ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+
+
+
+
+  .from-left{
+    transform: translateX(-100%);
+    transition:  transform 1.7s ease;
+}
+
+.from-right{
+    transform: translateX(100%);
+    transition:  transform 1.7s ease;
+    
+}
+
+.from-right.active{
+    animation: logoSlide 1.7s linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.from-left.active{
+    animation: logoSlide 1.7s linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes logoSlide {
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 500px){
+
+    html{
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+
+    body{
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+
+    header{
+        width: 100%;
+        background-color: var(--energyWhite);
+    }
+
+    header .logo #menu-btn{
+        display: block;
+        cursor: pointer;
+        font-size: 30px;
+    }
+
+    header .desktopNav{
+        display: none;
+    }
+
+
+    header .logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 0 30px 0 30px;
+    }
+    
+    header .logo img{
+        width: 30%;
+        height: 35px;
+        margin-left: 50px;
+    }
+
+
+    header .mobile-navbar{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        gap: 50px;
+        top: 0;
+        padding-left: 15px;
+        width: 70vw;
+        height: 100vh;
+        background-color: var(--energyWhite);
+        box-shadow: var(--boxShadow);
+        left: -100%;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: all .7s ease-in-out;
+    }
+
+    header .mobile-navbar.mobile-navbar-open{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        position: fixed;
+        left: 0;
+    }
+
+    header .mobile-navbar .mobile-navbar-items{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        list-style: none;
+    }
+
+    header .mobile-navbar .mobile-navbar-items a{
+       width: 50%;
+       background-color: transparent;
+       color: var(--energyBlack);
+       height: 40px;
+       font-size: 17px;
+       text-decoration: none;
+       display: flex;
+       align-items: center;
+       padding-left: 10px;
+    }
+
+    header .mobile-navbar .mobile-navbar-items a:hover{
+        background-color: var(--energyDarkBlue);
+        color: var(--energyWhite);
+     }
+
+    header .mobile-navbar .engage{
+        height: 40px;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    header .mobile-navbar .engage a{
+        width: 100%;
+       background-color: var(--energyRed);
+       color: white;
+       height: 100%;
+       font-size: 17px;
+       text-decoration: none;
+       display: flex;
+       align-items: center;
+       padding-left: 10px;
+       border-radius: 5px;
+    }
+
+    header .mobile-navbar .engage a:hover{
+       background-color: var(--energyDarkRed);
+       color: white;
+    }
+
+    header .mobile-navbar #close{
+        position: absolute;
+        left: 90%;
+        top: 10px;
+        cursor: pointer;
+        font-size: 30px;
+    }
+
+    .main-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+        height: 100%;
+        margin-top: 30px;
+    }
+    
+    
+    
+    .main-container .hero-section{
+        width: 90vw;
+        height: 100vh;
+        margin-top: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-section .left-hand-side{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .hero-section .left-hand-side h3{
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 2;
+        color: var(--energyGrey);
+    }
+    
+    .hero-section .left-hand-side h1{
+        color: var(--energyDarkBlue);
+        font-size: 30px;
+    }
+    
+    .hero-section .left-hand-side a{
+        background-color: var(--energyRed);
+        color: var(--energyWhite);
+        width: 35%;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 17px;
+        text-decoration: none;
+        border-radius: 3px;
+        padding: 0 5px 0 5px;
+        transition: all .5s;
+    }
+    
+    .hero-section .left-hand-side a:hover{
+        width: 33%;
+    }
+    
+    
+    .hero-section .right-hand-side{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+    }
+    
+    .hero-section .right-hand-side .empty{
+        position: relative;
+        width: 5%;
+        height: 100%;
+        background-color: var(--energyLightGrey);
+        z-index: -100;
+        display: none;
+
+    }
+    
+    .hero-section .right-hand-side .hero-image{
+        width: 100%;
+        height: 450px;
+        position: relative;
+        overflow: hidden;
+        transition: all 1.3s;
+        display: flex;
+        flex-direction: row;
+        justify-self: flex-start;
+        z-index: 100;
+        box-shadow: var(--boxShadow);
+    }
+    
+    .hero-section .right-hand-side .hero-image img{
+        width: 100%;
+        height: 100%;
+        box-shadow: var(--boxShadow);
+        transition: all 1.3s;
+        overflow: hidden;
+    }
+    
+    .hero-section .right-hand-side .hero-image img:hover{
+        transform: scale(1.2);
+    }
+    
+    
+    
+    .main-container .main-wrapper{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--energyLightGrey);
+        margin-top: 170px;
+    }
+    
+    .main-wrapper .what-we-offer{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .main-wrapper .what-we-offer h3{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: var(--energyDarkBlue);
+    }
+    
+    
+    .main-wrapper .what-we-offer p{
+        width: 100%;
+        font-size: 17px;
+        line-height: 1.5;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: var(--energyGrey);
+    }
+    
+    .main-wrapper .core-services{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 30px;
+        padding-bottom: 50px;
+    }
+    
+    .main-wrapper .core-services .service{
+        width: 100%;
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+    .main-wrapper .core-services .service img{
+        width: 100%;
+        height: 65%;
+    }
+    
+    .main-wrapper .core-services .service h3{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: var(--energyDarkBlue);
+        font-size: 23px;
+        padding-left: 30px;
+    }
+    
+    .main-wrapper .core-services .service p{
+        width: 100%;
+        font-size: 17px;
+        line-height: 1.5;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: var(--energyGrey);
+        padding-left: 30px;
+    }
+    
+    .main-wrapper .core-services .service a{
+        color: var(--energyRed);
+        width: 100%;
+        height: 32px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 17px;
+        text-decoration: none;
+        transition: all .3s;
+        padding-left: 30px;
+    }
+    
+    .main-wrapper .core-services .service a:hover{
+        color: var(--energyDarkRed);
+        gap: 30px;
+    }
+    
+    .main-container .previous{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 100%;
+        background-color: var(--energyLightGrey);
+        padding: 0;
+        margin-top: 250px;
+    }
+    
+    .previous-contents{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        align-items: flex-start;
+        width: 100%;
+        height: 90%;
+        background-color: var(--energyDarkBlue);
+        padding: 10px 10px 10px 10px;
+    }
+    
+    .previous .previous-contents h5{
+        width: 100%;
+        color: var(--energyGrey);
+        font-size: 15px;
+    }
+    
+    .previous .previous-contents h3{
+        width: 100%;
+        color: var(--energyLightGrey);
+        line-height: 1.5;
+        font-size: 20px;
+    }
+    
+    .previous .previous-contents p{
+        font-size: 15px;
+        width: 100%;
+        line-height: 1.5;
+        color: var(--energyLightGrey);
+    }
+    
+    .previous .previous-contents hr{
+        width: 100%;
+        height: 1px;
+        opacity: .2;
+        background-color: var(--energyLightGrey);
+        margin-top: 50px;
+    }
+    
+    .previous .previous-contents a{
+        color: var(--energyLightGrey);
+        width: 40%;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 14px;
+        text-decoration: none;
+        padding: 0;
+    }
+    
+    
+    .previous-image{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        width: 90%;
+        height: 350px;
+        background-color: transparent;
+        z-index: 150;
+        position: relative;
+        bottom: 370px;
+    }
+    
+    .previous-image img{
+        width: 70%;
+        height: 100%;
+    }
+    
+    .main-container .our-blog{
+        width: 90%;
+        gap: 30px;
+        display: flex;
+        flex-direction: column;
+        margin-top: -350px;
+    }
+    
+    .our-blog h2{
+        color: var(--energyDarkBlue);
+        font-size: 25px;
+        font-weight: 700;
+    }
+    
+    .our-blog .user-blog{
+        width: 100%;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    
+    .our-blog .user-blog p{
+        width: 100%;
+        font-size: 17px;
+        color: var(--energyGrey);
+    }
+    
+    .our-blog .user-blog a{
+        background-color: var(--energyRed);
+        color: var(--energyWhite);
+        width: 45%;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 17px;
+        text-decoration: none;
+        border-radius: 3px;
+    }
+    
+    .our-blog .latest-blog-posts{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        margin-top: 50px;
+    }
+    
+    .our-blog .latest-blog-posts h5{
+        text-transform: uppercase;
+        font-size: 17px;
+        color: var(--energyGrey);
+    }
+    
+    .our-blog .latest-blog-posts .blog-posts{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction:column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+    .our-blog .latest-blog-posts .blog-posts .post{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    
+    
+    .our-blog .latest-blog-posts .blog-posts .post h3{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: var(--energyDarkBlue);
+        font-size: 23px;
+    }
+    
+    .our-blog .latest-blog-posts .blog-posts .post p{
+        width: 100%;
+        font-size: 17px;
+        line-height: 1.5;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: var(--energyGrey);
+    }
+    
+    .our-blog .latest-blog-posts .blog-posts .post a{
+        color: var(--energyRed);
+        width: 50%;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 17px;
+        text-decoration: none;
+        transition: all .3s;
+    }
+    
+    .our-blog .latest-blog-posts .blog-posts .post a:hover{
+        color: var(--energyDarkRed);
+        gap: 30px;
+    }
+    
+    .main-container .our-strength{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        align-items: center;
+        background-color: var(--energyLightGrey);
+        margin-top: 20px;
+        padding: 20px 0 20px 0;
+    }
+    
+    .our-strength .strength{
+        width: 90%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    
+    .our-strength .strength h5{
+        width: 100%;
+        color: var(--energyGrey);
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+    
+    .our-strength .strength h3{
+        width: 100%;
+        color: var(--energyGrey);
+        line-height: 1.5;
+        font-size: 25px;
+    }
+    
+    .our-strength .strength p{
+        font-size: 15px;
+        width: 100%;
+        line-height: 1.5;
+        color: var(--energyGrey);
+    }
+    
+    .our-strength .strength a{
+        background-color: var(--energyRed);
+        color: var(--energyWhite);
+        width: 45%;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        font-size: 17px;
+        text-decoration: none;
+        border-radius: 3px;
+        transition: all .3s;
+        padding: 0 5px 0 5px;
+    }
+    
+    .our-strength .strength a:hover{
+        gap: 30px;
+    }
+    
+    .our-strength img{
+        width: 100%;
+        height: 450px;
+        position: relative;
+        top: 0;
+    }
+
+
+
+    footer{
+        width: 100%;
+        height: 100%;
+        background-color: var(--energyDarkBlue);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 30px 0 30px 0;
+    }
+    
+    footer .identity{
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        gap: 30px;
+    }
+    
+    footer .identity img{
+        width: 50%;
+        height: 40px;
+    }
+    
+    footer .identity .reach-us{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        height: 100%;
+        gap: 30px;
+    }
+    
+    footer .identity .reach-us .contact{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        height: 100%;
+    }
+    
+    footer .identity .reach-us .contact h5{
+        font-size: 15px;
+        color: var(--energyLightGrey);
+        text-transform: uppercase;
+    }
+    
+    footer .identity .reach-us .contact p{
+        font-size: 17px;
+        color: var(--energyLightGrey);
+    }
+    
+    footer .identity .reach-us address{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        height: 100%;
+    }
+    
+    footer .identity .reach-us address h5{
+        font-size: 15px;
+        color: var(--energyLightGrey);
+        text-transform: uppercase;
+        text-align: left;
+    }
+    
+    footer .identity .reach-us address p{
+        font-size: 17px;
+        color: var(--energyLightGrey);
+        text-align: left;
+    }
+    
+    footer hr{
+        width: 90%;
+        height: 1px;
+        opacity: .2;
+        background-color: var(--energyLightGrey);
+        margin-top: 30px;
+    }
+    
+    footer .copy-right{
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        font-size: 10px;
+        color: var(--energyLightGrey);
+        opacity: .7;
+    }
+    
+    footer .copy-right span{
+        color: var(--energyRed);
+    }
+    
+
+
+
+
+    
+
+}
