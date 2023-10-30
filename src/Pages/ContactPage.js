@@ -1,13 +1,13 @@
 import React from 'react';
-import { Header, Navbar, CurrentPage} from '../NextHeader';
-import { Container, reveal, leftAndRight } from '../NextContainer';
-import { Footer } from '../NextFooter';
+import Header from '../Components/EnergyHeader';
+import ContactContent  from '../Components/ContactContent';
+import Footer from '../Components/EnergyFooter';
 
 function Contact(){
     return(
         <div>
             <Header />
-            <Container greater=">" />
+            <ContactContent />
             <Footer />
         </div>
     )

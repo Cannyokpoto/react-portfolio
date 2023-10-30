@@ -2,7 +2,7 @@ import "./EnergyMall.css";
 import React from "react";
 import { useRef } from "react";
 import PHOTOS from "./images/index";
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 //Header
@@ -17,6 +17,7 @@ function Header(){
             navRef.current.classList.toggle("mobile-navbar-open");
         };
 
+
         return(
             <div>
                 <header>
@@ -27,16 +28,16 @@ function Header(){
 
                     {/* desktopNav navigation */}
 
-                    <nav className="desktopNav">
+                    <nav className="desktopNav" ref={navRef}>
                         <ul className="myNav">
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/about">About Us</Link></li>
-                            <li><Link to="/services">Services</Link></li>
-                            <li><Link to="/contact">Contact</Link></li>
+                            <li><NavLink to="/">Home</NavLink></li>
+                            <li><NavLink to="/about">About Us</NavLink></li>
+                            <li><NavLink to="/services">Services</NavLink></li>
+                            <li><NavLink to="/contact">Contact</NavLink></li>
                         </ul>
 
                         <div className="engage">
-                            <Link to="/contact.html">Engage</Link>
+                            <NavLink to="/contact">Engage</NavLink>
                         </div>
                     </nav>
 
@@ -48,14 +49,14 @@ function Header(){
                         </div>
 
                         <ul className="mobile-navbar-items">
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/about">About Us</Link></li>
-                            <li><Link to="/services">Services</Link></li>
-                            <li><Link to="/contact">Contact</Link></li>
+                            <li><NavLink to="/">Home</NavLink></li>
+                            <li><NavLink to="/about">About Us</NavLink></li>
+                            <li><NavLink to="/services">Services</NavLink></li>
+                            <li><NavLink to="/contact">Contact</NavLink></li>
                         </ul>
 
                         <div className="engage">
-                            <Link to="/contact">Engage</Link>
+                            <NavLink to="/contact">Engage</NavLink>
                         </div>
                     </nav>
                 </header>
@@ -63,39 +64,6 @@ function Header(){
         )
 };
 
-
-
-//mobile navigation
-
-// function Navbar(){
-//     const menu = document.getElementById('mobile-navbar');
-   
-
-//     if (menu.classList.contains('mobile-navbar-open')){
-//         menu.classList.remove('mobile-navbar-open');
-//     }
-
-//     else{
-//         menu.classList.add('mobile-navbar-open');
-//     }
-
-// };
-
-
-
-//Indicate current web page
-
-// function CurrentPage(){
-//     const path = window.location.pathname;
-//     const navLinks = document.querySelectorAll('nav a');
-
-
-//     navLinks.forEach(link => {
-//     if (link.to.includes(`${path}`)){
-//         link.classList.add("current")
-//     };
-//     });
-// }
 
     
 

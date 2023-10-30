@@ -25,7 +25,7 @@ const PHOTOS = {
     PHOTO24: require("./png-transparent-meta-logo-facebook-social-media-chat-message-communication-icon-thumbnail.png"),
     PHOTO25: require("./Rectangle 5.png"),
     PHOTO26: require("./solarman 1.png"),
-    PHOTO27: require("./Udemy_logo.svg.png").default
+    PHOTO27: require("./Udemy_logo.svg.png")
 };
 
 export default PHOTOS;

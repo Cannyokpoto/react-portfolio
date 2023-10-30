@@ -124,7 +124,7 @@ header .desktopNav .myNav li a:hover::after{
     width: 100%;
 }
 
-header .desktopNav .myNav li a.current::after{
+header .desktopNav .myNav li a.active::after{
     content: "";
     width: 100%;
     height: 3px;
@@ -1014,7 +1014,7 @@ footer .copy-right span{
     .hero-section .left-hand-side a{
         background-color: var(--energyRed);
         color: var(--energyWhite);
-        width: 35%;
+        width: 45%;
         height: 40px;
         display: flex;
         flex-direction: row;

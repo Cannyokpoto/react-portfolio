@@ -1,5 +1,6 @@
 import React from "react";
 import PHOTOS from "./images/index.js";
+import "./EnergyMall.css"
 
 class Footer extends React.Component{
 
@@ -26,7 +27,7 @@ class Footer extends React.Component{
 
                     <hr/>
 
-                    <div class="copy-right">
+                    <div className="copy-right">
                         Copyright 2023 | All Rights Reserved 
                         <div>|</div> 
                         <div>Developed by 
