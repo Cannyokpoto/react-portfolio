@@ -60,54 +60,54 @@ body{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--energyDarkBlue);
+    background-color: var(--energyLightGrey);
     border-radius: 20px;
 }
 
 .contacts .myspan i{
-    color: var(--energyDarkBlue);
-    font-size: 50px;
-    background-color: white;
+    color: white;
+    font-size: 25px;
+    background-color: var(--energyDarkBlue);
     border-radius: 50%;
     padding: 20px;
 }
 
 .contacts .myspan .fa-chevron-down{
-    color: var(--energyDarkBlue);
+    color: white;
     font-size: 25px;
-    background-color: white;
     border-radius: 50%;
     padding: 3px;
 }
 
 
 .contacts .myspan h3{
-    color: white;
+    color: var(--energyDarkBlue);
 }
 
 .contacts .myspan hr{
-    background-color: white;
+    background-color: var(--energyDarkBlue);
     height: 2px;
     width: 70%;
 }
 
 .contacts .myspan p{
-    color: white;
+    color: var(--energyDarkBlue);
     font-size: 17px;
 }
 
 .contacts .myspan h5{
-    color: white;
+    color: var(--energyDarkBlue);
 }
 
 .contacts .myspan a{
-    color: white;
+    color: var(--energyDarkBlue);
     text-decoration: underline;
     width: 70%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
+
 
 .map{
     width: 100%;
@@ -118,7 +118,7 @@ body{
 
 
 
-@media screen and (max-width:500px) {
+@media (max-width:500px) {
 
     body{
         width: 100%;
@@ -245,35 +245,22 @@ body{
     }
     
     .contacts .myspan i{
-        font-size: 50px;
-        background-color: white;
+        font-size: 25px;
         border-radius: 50%;
         padding: 20px;
     }
     
     .contacts .myspan .fa-chevron-down{
         font-size: 25px;
-        background-color: white;
         border-radius: 50%;
         padding: 3px;
     }
     
-    
-    .contacts .myspan h3{
-        color: white;
-    }
-    
     .contacts .myspan p{
-        color: white;
         font-size: 17px;
     }
     
-    .contacts .myspan h5{
-        color: white;
-    }
-    
     .contacts .myspan a{
-        color: white;
         text-decoration: underline;
         width: 70%;
         display: flex;

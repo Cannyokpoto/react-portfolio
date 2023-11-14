@@ -1,14 +1,66 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import PHOTOS from './images/index.js';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
+import SwiperCore from 'swiper/core';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import CountUp from 'react-countup';
+import ScrollTrigger from 'react-scroll-trigger';
+
+
+
+
+const Data = [
+    {
+        image: PHOTOS.PHOTO10,
+        paragraph: "Energy mall is very good",
+        image2: PHOTOS.PHOTO13,
+        paragraph2: "Energy mall is very good 2"
+    },
+
+    {
+        image: PHOTOS.PHOTO9,
+        paragraph: "Energy mall is better",
+        image2: PHOTOS.PHOTO1,
+        paragraph2: "Energy mall is better 2",
+    },
+
+    {
+        image: PHOTOS.PHOTO4,
+        paragraph: "Energy mall is the best",
+        image2: PHOTOS.PHOTO14,
+        paragraph2: "Energy mall is the best 2",
+    },
+
+    {
+        image: PHOTOS.PHOTO7,
+        paragraph: "Energy mall to the world",
+        image2: PHOTOS.PHOTO17,
+        paragraph2: "Energy mall to the world 2",
+    },
+
+    {
+        image: PHOTOS.PHOTO5,
+        paragraph: "Energy mall is the God of energy",
+        image2: PHOTOS.PHOTO15,
+        paragraph2: "Energy mall is the God of energy 2",
+    },
+]
+
+const CustomPrevButton = () => <div className="custom-prev-button"><i class="fa-solid fa-arrow-left"></i></div>;
+const CustomNextButton = () => <div className="custom-next-button"><i class="fa-solid fa-arrow-right"></i></div>;
+
+SwiperCore.use([Navigation]);
+
 
 function AboutContent(){
 
-    
-
-    // const greater = ">";
+    const [counterOn, setCounterOn] = useState(false);
 
     return(
         <div>
@@ -49,9 +101,12 @@ function AboutContent(){
                             </span>
                         </span>
 
-                        <span className="numbers">
+                        <ScrollTrigger className="numbers"
+                        onEnter={() => setCounterOn (true)}
+                        onExit={() => setCounterOn (false)}
+                        >
                             <span className="clients">
-                                <h3 className="num" data-val="50">0</h3>
+                                {counterOn && <CountUp className="num" start={0} end={100} duration={10} delay={1} />}
                                 <p>Clients</p>
                             </span>
 
@@ -60,20 +115,20 @@ function AboutContent(){
                             </span>
 
                             <span className="installation">
-                                <h3 className="num" data-val="120">0</h3>
+                                {counterOn && <CountUp className="num" start={0} end={170} duration={10} delay={1} />}
                                 <p>installation</p>
                             </span>
-                        </span>
+                        </ScrollTrigger>
                     </div>
 
                     <div className="installer">
-                        <img src="./images/solarman 1.png" alt="" />
+                        <img src={PHOTOS.PHOTO26} alt="" />
                         <hr/>
                     </div>
 
                     <div className="mission-vision">
                         <span className="statement">
-                            <img src="./images/1628441.png" alt="" />
+                            <img src={PHOTOS.PHOTO3} alt="" />
                             <h3>Mission</h3>
                             <p>A leading digital platform that connects B2B, Supply Chain, 
                                 Engineering Products, and Services using AI and IoT to streamline
@@ -83,7 +138,7 @@ function AboutContent(){
                         </span>
 
                         <span className="statement">
-                            <img src="./images/5229301.png" alt="" />
+                            <img src={PHOTOS.PHOTO4} alt="" />
                             <h3>Vision</h3>
                             <p>A leading digital platform that connects B2B, Supply Chain, 
                                 Engineering Products, and Services using AI and IoT to streamline buying 
@@ -131,123 +186,67 @@ function AboutContent(){
                 <section className="our-testimonials">
                     <h3>What our clients say</h3>
 
-                    <div className="testimonial">
+                    
 
-                        <div className="mySlides">
-                            <div className="testimony">
-                                <img src="./images/Ellipse 1.png" alt="" />
-                                <p>Energy mall is my number one choice in Solar Installations and 
-                                    equipment purchase anytime anyday, 
-                                    they’re simply the best.</p>
-                            </div>
-            
-                            <div className="testimony">
-                                <img src="./images/Ellipse 2.png" alt="" />
-                                <p>Energy mall is my number one choice in Solar Installations and 
-                                    equipment purchase anytime anyday, 
-                                    they’re simply the best.</p>
-                            </div>
-                        </div>
+                        <Swiper
+                            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+                            spaceBetween={50}
+                            slidesPerView={1}
+                            onSlideChange={() => console.log('slide change')}
+                            onSwiper={(swiper) => console.log(swiper)}
+                            className='testimonial'
+                            navigation = {{
+                                nextEl: '.custom-next-button',
+                                prevEl: '.custom-prev-button',
+                            }}
+                            pagination={{ clickable: true }}
+                            autoplay={{delay: 3000}} //You can just say {true} to have the default 3sec
+                            >
 
-                        <div className="mySlides">
-                            <div className="testimony">
-                                <img src="./images/author-1.png" alt="" />
-                                <p>Energy mall is my number one choice in Solar Installations and 
-                                    equipment purchase anytime anyday, 
-                                    they’re simply the best.</p>
-                            </div>
-            
-                            <div className="testimony">
-                                <img src="./images/pic-1.png" alt="" />
-                                <p>Energy mall is my number one choice in Solar Installations and 
-                                    equipment purchase anytime anyday, 
-                                    they’re simply the best.</p>
-                            </div>
-                        </div>
-                        
-                        <div className="mySlides">
-                            <div className="testimony">
-                                <img src="./images/pic-2.png" alt="" />
-                                <p>Energy mall is my number one choice in Solar Installations and 
-                                    equipment purchase anytime anyday, 
-                                    they’re simply the best.</p>
-                            </div>
-            
-                            <div className="testimony">
-                                <img src="./images/pic-3.png" alt="" />
-                                <p>Energy mall is my number one choice in Solar Installations and 
-                                    equipment purchase anytime anyday, 
-                                    they’re simply the best.</p>
-                            </div>
-                        </div>
+                            {
+                                Data.map((content) =>{
+                                    return(
+                                        <SwiperSlide className="mySlides">
+                                            <CustomPrevButton />
+                                            
+                                            <div className="testimony">
+                                                <img src={content.image} alt="" />
+                                                <p>{content.paragraph}</p>
+                                            </div>
+                            
+                                            <div className="testimony">
+                                                <img src={content.image2} alt="" />
+                                                <p>{content.paragraph2}</p>
+                                            </div>
 
-                        <div className="mySlides">
-                            <div className="testimony">
-                                <img src="./images/1628441.png" alt="" />
-                                <p>Energy mall is my number one choice in Solar Installations and 
-                                    equipment purchase anytime anyday, 
-                                    they’re simply the best.</p>
-                            </div>
-            
-                            <div className="testimony">
-                                <img src="./images/74508295-0627-442d-aa93-c32b8c3463a5.jpg" alt="" />
-                                <p>Energy mall is my number one choice in Solar Installations and 
-                                    equipment purchase anytime anyday, 
-                                    they’re simply the best.</p>
-                            </div>
-                        </div>
-
-                        <div className="mySlides">
-                            <div className="testimony">
-                                <img src="./images/solarman 1.png" alt="" />
-                                <p>Energy mall is my number one choice in Solar Installations and 
-                                    equipment purchase anytime anyday, 
-                                    they’re simply the best.</p>
-                            </div>
-            
-                            <div className="testimony">
-                                <img src="./images/Image (3).png" alt="" />
-                                <p>Energy mall is my number one choice in Solar Installations and 
-                                    equipment purchase anytime anyday, 
-                                    they’re simply the best.</p>
-                            </div>
-                        </div>        
-                    </div>
-
-                    <div className="carousel">
-                        <a className="prev" onclick="plusSlides(-1)">&#10094;</a>
-                        <a className="next" onclick="plusSlides(1)">&#10095;</a>
-                    </div>
-
-
-                    <div className="swiper-pagination">
-                        <span className="dot"></span>
-                        <span className="dot"></span>
-                        <span className="dot"></span>
-                        <span className="dot"></span>
-                        <span className="dot"></span>
-                    </div>
+                                            <CustomNextButton />
+                                        </SwiperSlide>
+                                    )
+                                })
+                            }
+                        </Swiper>
+                    
                 </section>
 
                 <section className="satisfied-brands">
                     <h3>Brands we've worked for</h3>
                     <div className="brands">
                         <div className="brand-logos">
-                            <img src="./images/Udemy_logo.svg.png" alt="" />
-                            <img src="./images/Adidas_logo.png" alt="" />
-                            <img src="./images/nike-4-logo-png-transparent.png" alt="" />
-                            <img src="./images/google-text-logo-number.png" alt="" />
-                            <img src="./images/Udemy_logo.svg.png" alt="" />
-                            <img src="./images/Adidas_logo.png" alt="" />
+                            <img src={PHOTOS.PHOTO27} alt="" />
+                            <img src={PHOTOS.PHOTO6} alt="" />
+                            <img src={PHOTOS.PHOTO20} alt="" />
+                            <img src={PHOTOS.PHOTO12} alt="" />
+                            <img src={PHOTOS.PHOTO27} alt="" />
+                            <img src={PHOTOS.PHOTO6} alt="" />
                         </div>
 
                         <div className="brand-logos">
-                            <img src="./images/Udemy_logo.svg.png" alt="" />
-                            <img src="./images/Adidas_logo.png" alt="" />
-                            <img src="./images/nike-4-logo-png-transparent.png" alt="" />
-                            <img src="./images/google-text-logo-number.png" alt="" />
-                            <img src="./images/Udemy_logo.svg.png" alt="" />
-                            <img src="./images/Adidas_logo.png" alt="" />
+                            <img src={PHOTOS.PHOTO27} alt="" />
+                            <img src={PHOTOS.PHOTO6} alt="" />
+                            <img src={PHOTOS.PHOTO20} alt="" />
+                            <img src={PHOTOS.PHOTO12} alt="" />
+                            <img src={PHOTOS.PHOTO27} alt="" />
+                            <img src={PHOTOS.PHOTO6} alt="" />
                         </div>
                     </div>
                 </section>

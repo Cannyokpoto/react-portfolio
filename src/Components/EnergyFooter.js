@@ -31,7 +31,7 @@ class Footer extends React.Component{
                         Copyright 2023 | All Rights Reserved 
                         <div>|</div> 
                         <div>Developed by 
-                            <span>Promise Okpoto</span>
+                            <span> Promise Okpoto</span>
                         </div> 
                     </div>
                 </footer>

@@ -27,7 +27,7 @@
 }
 
 body{
-    width: 100%;
+    width: 100vw;
     height: 100%;
     background-color: var(--energyWhite);
     display: flex;
@@ -160,7 +160,7 @@ header .desktopNav .engage a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     margin-top: 170px;
 }
@@ -537,8 +537,8 @@ header .desktopNav .engage a{
     justify-content: center;
     gap: 30px;
     background-color: var(--energyLightGrey);
-    border-radius: 50px;
-    box-shadow: 1px 3px 5px 5px rgba(225, 225, 225, .7);
+    border-radius: 20px;
+    box-shadow: 1px 3px 5px rgba(225, 225, 225, .7);
 }
 
 .about-container .our-testimonials .testimonial  .mySlides .testimony img{
@@ -555,53 +555,9 @@ header .desktopNav .engage a{
     color: var(--energyGrey);
 }
 
-
-.about-container .our-testimonials .carousel{
-    width: 90%;
-    height: 70px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position: relative;
-    top: -230px;
-}
-
-.about-container .our-testimonials .carousel .next, .prev{
-    color: var(--energyDarkBlue);
-    font-weight: 900;
-    width: auto;
-    padding: 16px;
-    transition: 0.6s ease;
-    user-select: none;
-}
-
-
-.prev:hover, .next:hover{
-    background-color: var(--energyLightGrey);
-}
-
-
-
-.swiper-pagination{
-    text-align: center;
-    position: relative;
-    top: -120px;
-}
-
-.dot{
-    background-color: var(--energyLightGrey);
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.dot.active{
-    height: 17px;
-    width: 17px;
-    background: var(--energyRed);
+.custom-next-button i, .custom-prev-button i{
+    font-size: 35px;
+    color: var(--energyGrey);
 }
 
 
@@ -854,7 +810,7 @@ footer .copy-right span{
 
     body{
         overflow: hidden;
-        width: 100%;
+        width: 100vw;
         height: 100%;
     }
 
@@ -975,7 +931,7 @@ footer .copy-right span{
         flex-direction: column;
         align-items: center;
         gap: 30px;
-        width: 100%;
+        width: 100vw;
         height: 100%;
         margin-top: 30px;
     }

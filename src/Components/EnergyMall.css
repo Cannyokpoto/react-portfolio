@@ -1528,7 +1528,9 @@ footer .copy-right span{
     footer .identity .reach-us address p{
         font-size: 17px;
         color: var(--energyLightGrey);
-        text-align: left;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
     }
     
     footer hr{
