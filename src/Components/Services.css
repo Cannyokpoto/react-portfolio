@@ -438,21 +438,21 @@ footer .copy-right span{
     }
 
     header .mobile-navbar .mobile-navbar-items a{
-       width: 50%;
-       background-color: transparent;
-       color: var(--energyBlack);
-       height: 40px;
-       font-size: 17px;
-       text-decoration: none;
-       display: flex;
-       align-items: center;
-       padding-left: 10px;
-    }
-
-    header .mobile-navbar .mobile-navbar-items a:hover{
-        background-color: var(--energyDarkBlue);
-        color: var(--energyWhite);
+        width: 50%;
+        background-color: var(--energyWhite);
+        color: var(--energyDarkBlue);
+        height: 40px;
+        font-size: 17px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
      }
+ 
+     header .mobile-navbar .mobile-navbar-items a:hover{
+         background-color: var(--energyDarkBlue);
+         color: var(--energyWhite);
+      }
 
     header .mobile-navbar .engage{
         height: 40px;
@@ -485,6 +485,7 @@ footer .copy-right span{
         top: 10px;
         cursor: pointer;
         font-size: 30px;
+        color: var(--energyDarkBlue);
     }
 
    

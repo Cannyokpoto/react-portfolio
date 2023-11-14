@@ -919,8 +919,8 @@ footer .copy-right span{
 
     header .mobile-navbar .mobile-navbar-items a{
        width: 50%;
-       background-color: transparent;
-       color: var(--energyBlack);
+       background-color: var(--energyWhite);
+       color: var(--energyDarkBlue);
        height: 40px;
        font-size: 17px;
        text-decoration: none;
@@ -965,6 +965,7 @@ footer .copy-right span{
         top: 10px;
         cursor: pointer;
         font-size: 30px;
+        color: var(--energyDarkBlue);
     }
 
     .main-container{

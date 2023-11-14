@@ -204,16 +204,21 @@ body{
 
 
     header .mobile-navbar .mobile-navbar-items a{
-        color: white;
-        background-color: var(--black);
-        padding-left: 20px;
-        width: 100%;
-        height: 50px;
-        font-size: 15px;
+        width: 50%;
+        background-color: var(--energyWhite);
+        color: var(--energyDarkBlue);
+        height: 40px;
+        font-size: 17px;
+        text-decoration: none;
         display: flex;
         align-items: center;
-    }
-
+        padding-left: 10px;
+     }
+ 
+     header .mobile-navbar .mobile-navbar-items a:hover{
+         background-color: var(--energyDarkBlue);
+         color: var(--energyWhite);
+      }
 
     header .navbar{
         display: none;
