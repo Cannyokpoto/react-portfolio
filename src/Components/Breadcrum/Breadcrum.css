@@ -1,0 +1,26 @@
+:root{
+    --energyRed: #FF7235;
+    --energyDarkRed: #540808;
+    --energyBlack: #000000;
+    --energyDarkBlue: #263640;
+    --energyGrey: #929A9F;
+    --energyLightGrey: #F5F8FA;
+    --energyWhite: #FFFFFF;
+    --boxShadow: 5px 5px 5px rgb(178, 180, 182);
+}
+
+.breadcrum{
+    width: 90vw;
+    height: 100%;
+    font-size: 17px;
+    color: var(--energyBlack);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 700;
+}
+
+.breadcrum .greater{
+    color: var(--energyGrey);
+    font-size: 17px;
+}

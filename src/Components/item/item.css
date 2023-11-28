@@ -1,0 +1,58 @@
+
+:root{
+    --energyRed: #FF7235;
+    --energyDarkRed: #540808;
+    --energyBlack: #000000;
+    --energyDarkBlue: #263640;
+    --energyGrey: #929A9F;
+    --energyLightGrey: #F5F8FA;
+    --energyWhite: #FFFFFF;
+    --boxShadow: 5px 5px 5px rgb(178, 180, 182);
+}
+
+
+.item{
+    width: 300px;
+    height: 300px;
+    background-color: var(--energyLightGrey);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item img{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.item:hover{
+    transform: scale(1.05);
+    transition: .6s;
+    box-shadow: var(--boxShadow);
+}
+
+.item p{
+    margin: 6px 0px;
+    padding-left: 20px;
+}
+
+.item .item-prices{
+    display: flex;
+    gap: 20px;
+    padding-left: 20px;
+}
+
+.item .item-prices-new{
+    color: var(--energyBlack);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.item .item-prices-old{
+    color: var(--energyGrey);
+    font-size: 17px;
+    font-weight: 500;
+    text-decoration: line-through;
+}

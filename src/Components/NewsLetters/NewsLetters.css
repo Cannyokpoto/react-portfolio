@@ -1,0 +1,72 @@
+:root{
+    --energyRed: #FF7235;
+    --energyDarkRed: #540808;
+    --energyBlack: #000000;
+    --energyDarkBlue: #263640;
+    --energyGrey: #929A9F;
+    --energyLightGrey: #F5F8FA;
+    --energyWhite: #FFFFFF;
+    --boxShadow: 5px 5px 5px rgb(178, 180, 182);
+}
+
+.news-letters{
+    width: 70%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
+    margin: auto;
+    margin-top: 150px;
+    gap: 30px;
+}
+
+.news-letters h1{
+    color: var(--energyDarkBlue);
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.news-letters p{
+    color: var(--energyDarkBlue);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.news-letters form{
+    width: 70%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.news-letters form input{
+    height: 100%;
+    width: 70%;
+    border-radius: 30px;
+    outline: none;
+    border-top: 1px solid var(--energyGrey);
+    border-bottom: 1px solid var(--energyGrey);
+    border-left: 1px solid var(--energyGrey);
+    border-right: none;
+    padding-left: 20px;
+}
+
+.news-letters form button{
+    background-color: var(--energyDarkBlue);
+    color: var(--energyWhite);
+    font-size: 22px;
+    height: 100%;
+    width: 20%;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.news-letters form button:hover{
+    background-color: var(--energyGrey);
+}

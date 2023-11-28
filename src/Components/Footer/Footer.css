@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+
+:root{
+    --energyRed: #FF7235;
+    --energyDarkRed: #540808;
+    --energyBlack: #000000;
+    --energyDarkBlue: #263640;
+    --energyGrey: #929A9F;
+    --energyLightGrey: #F5F8FA;
+    --energyWhite: #FFFFFF;
+    --boxShadow: 5px 5px 50px 5px rgb(245, 248, 250);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .5s linear;
+    scroll-behavior: smooth;
+}
+
+.my-footer{
+    margin: auto;
+    height: 400px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.my-footer img{
+    width: 15%;
+    height: 60px;
+}
+
+
+
+.my-footer .quick-links{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    font-weight: 600;
+}
+
+.my-footer .quick-links li{
+   list-style: none;
+}
+
+.my-footer .quick-links li a{
+    color: var(--energyBlack);
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.my-footer .socials{
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+.my-footer .socials i{
+    font-weight: 600;
+    font-size: 30px;
+    color: var(--energyBlack);
+}
+
+.my-footer hr{
+    width: 80vw;
+    height: 2px;
+    background-color: var(--energyGrey);
+}
+
+.my-footer small{
+    font-size: 17px;
+    opacity: .6;
+}
