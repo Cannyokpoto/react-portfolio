@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap');
 
 
 :root{
@@ -66,6 +67,10 @@ header .logo{
 header .logo img{
     width: 70%;
     height: 50%;
+}
+
+header .logo .cart{
+    display: none;
 }
 
 header .logo #menu-btn{
@@ -231,6 +236,7 @@ header .desktopNav .cart:hover .cart-counter{
 
     header{
         width: 100%;
+        height: 70px;
         background-color: var(--energyWhite);
     }
 
@@ -257,8 +263,63 @@ header .desktopNav .cart:hover .cart-counter{
     
     header .logo img{
         width: 30%;
-        height: 100%;
+        height: 50%;
         margin-left: 50px;
+    }
+
+    header .logo .cart{
+        width: 30%;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        gap: 3px;
+        text-decoration: none;
+    }
+    
+    .cart span{
+        color: var(--energyBlack);
+        font-size: 17px;
+    }
+    
+    header .logo .cart .my-cart{
+        color: var(--energyBlack);
+        position: relative;
+        top: 4px;
+        font-size: 17px;
+    }
+    
+    header .logo .cart:hover .my-cart{
+        color: var(--energyRed);
+    }
+    
+    header .logo .cart:hover span{
+        color: var(--energyRed);
+    }
+    
+    header .logo .cart .cart-counter{
+        width: 15%;
+        height: 47%;
+        font-size: 15px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--energyRed);
+        color: var(--energyWhite);
+        padding-bottom: 7px;
+        position: relative;
+        top: -7px;
+        left: -7px;
+    }
+    
+    header .logo .cart:hover .cart-counter{
+        background-color: transparent;
+        border: 1px solid var(--energyGrey);
+        color: var(--energyBlack);
     }
 
 

@@ -27,8 +27,13 @@ function Header(){
                 <header>
                     <div className="logo">
                         <i className="fas fa-bars" id="menu-btn" onClick={Navbar}></i>
-                        <img src={ PHOTOS.PHOTO10 } alt="logo" />
-                        
+                        <img src={ PHOTOS.LOGO } alt="logo" />
+
+                        <NavLink to="/cart" className="cart">
+                            <span>cart</span>
+                            <FaCartShopping className="my-cart" />
+                            <div className="cart-counter">{getTotalCartItems()}</div>
+                        </NavLink>
                     </div>
 
                     {/* desktopNav navigation */}
@@ -68,11 +73,6 @@ function Header(){
 
                         <div className="engage">
                             <NavLink to="/login">Login</NavLink>
-                        </div>
-
-                        <div className="cart">cart
-                            <NavLink to="/cart"><FaCartShopping className="my-cart" /></NavLink>
-                            <div className="cart-counter">0</div>
                         </div>
                     </nav>
                 </header>

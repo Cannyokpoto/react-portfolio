@@ -15,7 +15,7 @@ function Offers(props){
             </div>
            
            <div className='offers-right'>
-                <img src={ PHOTOS.PHOTO8 } alt="offers" />
+                <img src={ PHOTOS.EXCLUS } alt="offers" />
             </div>
         </div>
     )

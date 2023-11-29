@@ -12,10 +12,9 @@ function Hero(){
                     <div className="left-sub">
                         <div className="hand">
                             <p>new</p>
-                            <img src={PHOTOS.PHOTO32} alt=""/>
+                            <img src={PHOTOS.WAVE} alt=""/>
                         </div>
-                        <p>collections</p>
-                        <p>for everyone</p>
+                        <p className="collect">collections for everyone</p>
                     </div>
                     <NavLink to="/" className='latest-btn'>
                         <div>Latest Collections</div>
@@ -24,7 +23,7 @@ function Hero(){
                 </div>
         
                 <div className="right-hand-side">
-                    <img src={PHOTOS.PHOTO17} alt=""/>
+                    <img src={PHOTOS.HERO} alt=""/>
                 </div>
             </div>
         )

@@ -36,8 +36,8 @@ function ProductDisplay(props) {
                     <p>(150)</p>
                 </div>
                 <div className="product-prices">
-                    <div className="old-price">${product.old_price}</div>
-                    <div className="new-price">${product.new_price}</div>
+                    <div className="old-price"><div dangerouslySetInnerHTML={{__html: '&#8358;'}}></div>{product.old_price}</div>
+                    <div className="new-price"><div dangerouslySetInnerHTML={{__html: '&#8358;'}}></div>{product.new_price}</div>
                 </div>
                 <div className="product-description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
@@ -55,8 +55,8 @@ function ProductDisplay(props) {
                 </div>
                 <button onClick={() =>{addToCart(product.id)}}>ADD TO CART</button>
                 <div className="product-category">
-                    <p><span>Category: </span> Women, T-Shirt, Crop top</p>
-                    <p><span>Tags: </span>Modern, Latest</p>
+                    <p><span>Category:</span>  Women, T-Shirt, Crop top</p>
+                    <p><span>Tags:</span>  Modern, Latest</p>
                 </div>
             </div>
         </div>

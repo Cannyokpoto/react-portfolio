@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap');
+
 :root{
     --energyRed: #FF7235;
     --energyDarkRed: #540808;
@@ -15,6 +18,7 @@
     justify-content: space-between;
     width: 90vw;
     height: 75vh;
+    font-family: 'Poppins', sans-serif;
 }
 
 .product-display .left{
@@ -54,12 +58,12 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
     padding: 10px 0 10px 0;
 }
 
 .product-display .right h1{
-    font-size: 35px;
+    font-size: 20px;
 }
 
 .product-display .right .product-stars{
@@ -90,20 +94,22 @@
     gap: 20px;
     width: 30%;
     height: 70px;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .product-display .right .product-prices .old-price{
     color: var(--energyGrey);
     text-decoration: line-through;
+    display: flex;
 }
 
 .product-display .right .product-prices .new-price{
     color: var(--energyRed);
+    display: flex;
 }
 
 .product-display .right .product-description{
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .product-display .right .product-size{
@@ -111,6 +117,7 @@
     flex-direction: column;
     width: 60%;
     height: 170px;
+    font-size: 17px;
 }
 
 .product-display .right .product-size h3{
@@ -140,7 +147,7 @@
     padding: 3px;
     border-radius: 3px;
     cursor: pointer;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 
@@ -149,14 +156,17 @@
 }
 
 .product-display .right button{
-    height: 120px;
-    width: 25%;
+    height: 90px;
+    width: 20%;
     border: none;
-    font-size:17px;
+    font-size: 12px;
+    padding: 3px;
     background-color: var(--energyRed);
     color: var(--energyWhite);
     border-radius: 5px;
     cursor: pointer;
+    position: relative;
+    top: 10px;
 }
 
 .product-display .right button:hover{
@@ -164,9 +174,15 @@
 }
 
 .product-display .product-category{
-    font-size: 20px;
+    font-size: 15px;
 }
 
-.product-display .product-category span{
-    font-weight: 700;
+.product-display .product-category p{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.product-display .product-category p span{
+    font-weight: 600;
 }

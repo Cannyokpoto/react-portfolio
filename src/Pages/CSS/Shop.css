@@ -1,7 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-
-
 :root{
     --energyRed: #FF7235;
     --energyDarkRed: #540808;
@@ -13,3 +9,12 @@
     --boxShadow: 5px 5px 5px rgb(178, 180, 182);
 }
 
+.shop{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    font-family: 'Poppins', sans-serif;
+}

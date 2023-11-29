@@ -13,7 +13,7 @@ function ShopCategory(props) {
         <div className="shop-category">
             <img src={props.banner} alt="" className="banner" />
             <div className="shopCategory-indexSort">
-                <p><span>showing 1-12</span> out of 34 products</p>
+                <p><span>showing 1 - 12</span> out of 34 products</p>
                 <div className="shopCategory-sort">
                     Sort by <i class="fa-solid fa-caret-down"></i>
                 </div>
