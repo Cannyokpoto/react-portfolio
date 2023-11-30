@@ -92,8 +92,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-        gap: 0;
+        justify-content: center;
+        gap: 20px;
         padding: 0 0 20px 20px;
     }
     
@@ -108,8 +108,8 @@
         width: 90%;
         height: 100px;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: space-around;
         align-items: center;
         gap: 0;
         font-weight: 600;
@@ -121,14 +121,12 @@
     
     .my-footer .quick-links li a{
         color: var(--energyBlack);
-        font-size: 14px;
+        font-size: 12px;
         text-decoration: none;
     }
 
     .my-footer .quick-links li a:hover{
         color: var(--energyRed);
-        font-size: 14px;
-        text-decoration: none;
     }
     
     .my-footer .socials{
