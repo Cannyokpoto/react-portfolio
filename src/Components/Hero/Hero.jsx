@@ -39,7 +39,9 @@ function Hero(){
 
                         <p className="collect">collections for everyone</p>
 
-                        <img src={PHOTOS.HERO} alt=""/>
+                        <div className="hero-photo">
+                            <img src={PHOTOS.HERO} alt=""/>
+                        </div>
 
                         <NavLink to="/" className='latest-btn'>
                             <div>Latest Collections</div>
