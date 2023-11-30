@@ -29,7 +29,6 @@ function Header(){
                         <img src={ PHOTOS.LOGO } alt="logo" />
 
                         <NavLink to="/cart" className="cart">
-                            <span>cart</span>
                             <FaCartShopping className="my-cart" />
                             <div className="cart-counter">{getTotalCartItems()}</div>
                         </NavLink>

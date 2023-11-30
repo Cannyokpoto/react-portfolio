@@ -266,20 +266,14 @@ header .desktopNavv{
     }
     
     header .logo .cart{
-        width: 30%;
+        width: 40%;
         height: 40px;
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
         cursor: pointer;
-        gap: 3px;
         text-decoration: none;
-    }
-    
-    .cart span{
-        color: var(--energyBlack);
-        font-size: 17px;
     }
     
     header .logo .cart .my-cart{
@@ -292,10 +286,7 @@ header .desktopNavv{
     header .logo .cart:hover .my-cart{
         color: var(--energyRed);
     }
-    
-    header .logo .cart:hover span{
-        color: var(--energyRed);
-    }
+
     
     header .logo .cart .cart-counter{
         width: 15%;
