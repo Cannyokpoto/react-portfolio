@@ -75,15 +75,16 @@
 @media (max-width: 500px){
 
     .offers{
-        width: 70%;
+        width: 90%;
         height: 60vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
         margin-top: 30px;
         font-family: 'Poppins', sans-serif;
+        padding-left: 70px;
     }
     
     .offers .offers-left{
@@ -92,26 +93,26 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
     }
     
     .offers .offers-left h1{
         color: var(--energyDarkBlue);
         font-size: 20px;
         font-weight: 600;
-        text-align: center;
+        text-align: left;
         width: 100%;
     }
     
     .offers .offers-left p{
         color: var(--energyDarkBlue);
         font-size: 17px;
-        text-align: center;
+        text-align: left;
         width: 100%;
     }
     
     .offers .offers-left a{
-        width: 24%;
+        width: 40%;
         height: 30px;
         border-radius: 35px;
         background-color: var(--energyRed);
@@ -127,7 +128,7 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        top: 180px;
+        top: 200px;
     }
 
     .offers .offers-left a:hover{
@@ -139,13 +140,13 @@
         height: 40%;
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-start;
         position: relative;
         top: -50px;
     }
     
     .offers .offers-right img{
-        width: 40%;
+        width: 60%;
         height: 100%;
     }
 }
