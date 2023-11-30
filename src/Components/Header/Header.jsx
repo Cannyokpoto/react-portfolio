@@ -5,6 +5,8 @@ import PHOTOS from "../images/index";
 import { NavLink } from 'react-router-dom';
 import { ShopContext } from "../Context/ShopContext";
 import { FaCartShopping } from "react-icons/fa6";
+import { IoMenu } from "react-icons/io5";
+import { IoClose } from "react-icons/io5";
 
 
 //Header
@@ -13,20 +15,17 @@ function Header(){
 
     //Mobile Navbar
 
-    const navRef = useRef();
+    const [click, setClick] = useState(false);
+
+    const handleClick = () => setClick(!click);
 
     const {getTotalCartItems} = useContext(ShopContext);
-
-    function Navbar(){
-            navRef.current.classList.toggle("mobile-navbar-open");
-        };
 
 
         return(
             <div>
                 <header>
                     <div className="logo">
-                        <i className="fas fa-bars" id="menu-btn" onClick={Navbar}></i>
                         <img src={ PHOTOS.LOGO } alt="logo" />
 
                         <NavLink to="/cart" className="cart">
@@ -34,16 +33,20 @@ function Header(){
                             <FaCartShopping className="my-cart" />
                             <div className="cart-counter">{getTotalCartItems()}</div>
                         </NavLink>
+
+                        <div className="nav-icons" onClick={handleClick}>
+                            <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
+                        </div>
                     </div>
 
                     {/* desktopNav navigation */}
 
-                    <nav className="desktopNav" ref={navRef}>
+                    <nav className="desktopNav">
                         <ul className="myNav">
-                            <li><NavLink to="/">Shop</NavLink></li>
-                            <li><NavLink to="/men">Men</NavLink></li>
-                            <li><NavLink to="/women">Women</NavLink></li>
-                            <li><NavLink to="/kids">Kids</NavLink></li>
+                            <li><NavLink to="/" onClick={handleClick}>Shop</NavLink></li>
+                            <li><NavLink to="/men" onClick={handleClick}>Men</NavLink></li>
+                            <li><NavLink to="/women" onClick={handleClick}>Women</NavLink></li>
+                            <li><NavLink to="/kids" onClick={handleClick}>Kids</NavLink></li>
                         </ul>
 
                         <div className="engage">
@@ -57,22 +60,21 @@ function Header(){
                         </NavLink>
                     </nav>
 
+                    
+
                     {/* mobile-navigation */}
 
-                    <nav className="mobile-navbar" id="mobile-navbar" ref={navRef}>
-                        <div className="mobile-navbar-header">
-                            <i className="fas fa-times" id="close" onClick={Navbar}></i>
-                        </div>
+                    <nav className={click ? "mobile-navbar mobile-navbar-open" : "mobile-navbar"}>
 
                         <ul className="mobile-navbar-items">
-                            <li><NavLink to="/">Shop</NavLink></li>
-                            <li><NavLink to="/men">Men</NavLink></li>
-                            <li><NavLink to="/women">Women</NavLink></li>
-                            <li><NavLink to="/kids">Kids</NavLink></li>
+                            <li><NavLink to="/" onClick={handleClick}>Shop</NavLink></li>
+                            <li><NavLink to="/men" onClick={handleClick}>Men</NavLink></li>
+                            <li><NavLink to="/women" onClick={handleClick}>Women</NavLink></li>
+                            <li><NavLink to="/kids" onClick={handleClick}>Kids</NavLink></li>
                         </ul>
 
                         <div className="engage">
-                            <NavLink to="/login">Login</NavLink>
+                            <NavLink to="/login" onClick={handleClick}>Login</NavLink>
                         </div>
                     </nav>
                 </header>

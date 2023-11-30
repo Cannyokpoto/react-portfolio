@@ -36,10 +36,6 @@ body{
     overflow-x: hidden;
 }
 
-/* .App header p{
-    border: dashed red;
-} */
-
 
 header{
     width: 100%;
@@ -70,12 +66,6 @@ header .logo img{
 }
 
 header .logo .cart{
-    display: none;
-}
-
-header .logo #menu-btn{
-    color: var(--myBlue);
-    font-size: 30px;
     display: none;
 }
 
@@ -218,55 +208,63 @@ header .desktopNav .cart:hover .cart-counter{
     color: var(--energyBlack);
 }
 
+header .logo .nav-icons{
+    display: none;
+}
+
+header .logo .nav-icons i{
+    color: var(--energyBlack);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+header .desktopNavv{
+    display: none;
+}
+
 
 
 
 @media (max-width: 500px){
 
-    html{
-        overflow-x: hidden;
-        scroll-behavior: smooth;
-    }
-
-    body{
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-    }
-
-    header{
-        width: 100%;
-        height: 70px;
-        background-color: var(--energyWhite);
-    }
-
-    header .logo #menu-btn{
-        display: block;
-        cursor: pointer;
-        font-size: 30px;
-    }
 
     header .desktopNav{
         display: none;
     }
 
-
-    header .logo{
+    header{
+        width: 100%;
+        height: 70px;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+        background-color: var(--energyWhite);
+    }
+    
+    header .logo{
         width: 100%;
         height: 100%;
-        padding: 0 30px 0 30px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
     
     header .logo img{
         width: 30%;
         height: 50%;
-        margin-left: 50px;
     }
 
+    header .logo .nav-icons{
+        display: block;
+    }
+    
+    header .logo .nav-icons i{
+        color: var(--energyBlack);
+        font-size: 30px;
+        cursor: pointer;
+    }
+    
     header .logo .cart{
         width: 30%;
         height: 40px;
@@ -323,13 +321,14 @@ header .desktopNav .cart:hover .cart-counter{
     }
 
 
-    header .mobile-navbar{
+         header .mobile-navbar{
         display: flex;
         flex-direction: column;
         position: absolute;
         gap: 50px;
         top: 0;
         padding-left: 15px;
+        padding-top: 20px;
         width: 70vw;
         height: 100vh;
         background-color: var(--energyWhite);
@@ -338,6 +337,7 @@ header .desktopNav .cart:hover .cart-counter{
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         transition: all .7s ease-in-out;
     }
+    
 
     header .mobile-navbar.mobile-navbar-open{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -345,7 +345,10 @@ header .desktopNav .cart:hover .cart-counter{
         left: 0;
     }
 
-    header .mobile-navbar .mobile-navbar-items{
+    
+    
+
+     header .mobile-navbar .mobile-navbar-items{
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -353,9 +356,9 @@ header .desktopNav .cart:hover .cart-counter{
     }
 
     header .mobile-navbar .mobile-navbar-items a{
-       width: 50%;
+       width: 90%;
        background-color: var(--energyWhite);
-       color: var(--energyDarkBlue);
+       color: var(--energyBlack);
        height: 40px;
        font-size: 17px;
        text-decoration: none;
@@ -365,12 +368,12 @@ header .desktopNav .cart:hover .cart-counter{
     }
 
     header .mobile-navbar .mobile-navbar-items a:hover{
-        background-color: var(--energyDarkBlue);
+        background-color: var(--energyBlack);
         color: var(--energyWhite);
      }
 
     header .mobile-navbar .engage{
-        height: 40px;
+        height: 50px;
         width: 30%;
         display: flex;
         flex-direction: column;
@@ -387,20 +390,13 @@ header .desktopNav .cart:hover .cart-counter{
        align-items: center;
        padding-left: 10px;
        border-radius: 5px;
+       border-radius: 10px;
     }
 
     header .mobile-navbar .engage a:hover{
        background-color: var(--energyDarkRed);
        color: white;
-    }
+    } 
 
-    header .mobile-navbar #close{
-        position: absolute;
-        left: 90%;
-        top: 10px;
-        cursor: pointer;
-        font-size: 30px;
-        color: var(--energyDarkBlue);
-    }
 
 }
