@@ -25,7 +25,7 @@ function Footer(){
                     <NavLink to="/"><FaWhatsapp className="my-soc" /></NavLink>
                 </div>
                 <hr/>
-                <small>Copyright @2023 - All Right Reserved</small>
+                <small>Developed by <span>Promise Okpoto</span></small>
             </footer>
         )
 };

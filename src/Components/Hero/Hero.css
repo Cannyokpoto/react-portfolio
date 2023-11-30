@@ -204,18 +204,6 @@
         height: 250px;
     }
 
-    .hero .hero-section2 .hero-wrapper .hero-photo::after{
-        content: "";
-        width: 70%;
-        height: 40px;
-        background-color: var(--energyWhite);
-        opacity: .7;
-        position: absolute;
-        bottom: 80px;
-        left: 20%;
-        z-index: 100;
-    }
-
     .hero .hero-section2 .hero-wrapper .hero-photo img{
         width: 100%;
         height: 100%;

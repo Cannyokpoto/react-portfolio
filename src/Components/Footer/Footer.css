@@ -159,5 +159,13 @@
     .my-footer small{
         font-size: 14px;
         opacity: .6;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .my-footer small span{
+        font-size: 14px;
+        opacity: 1;
+        font-weight: 600;
+        color: var(--energyRed);
     }
 }
