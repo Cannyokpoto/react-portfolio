@@ -9,19 +9,14 @@ import { IoMdAdd } from "react-icons/io";
 
 function CartItems() {
 
-    const { getTotalCartAmount, AllProducts, cartItems, removeFromCart, addToCart } = useContext(ShopContext);
+    const { getTotalCartAmount, AllProducts, cartItems, removeFromCart, addToCart, getTotalCartItems } = useContext(ShopContext);
 
     return (
         <div className="CardItems">
-            <div className="CardItems-format-main">
-                <p>Products</p>
-                <p>Title</p>
-                <p>Price</p>
-                <p>Quantity</p>
-                <p>Totoal</p>
-                <p>Reduce / Increase Qty</p>
-            </div>
+            <p className="CardItems-format-main">Cart({getTotalCartItems()})</p>
+
             <hr />
+
             {AllProducts.map((e) =>{
                 if(cartItems[e.id] > 0){
                     return(
@@ -29,11 +24,19 @@ function CartItems() {
                             <div className="CardItems-format">
                                 <img src={e.image} className="product-photo" alt="" />
                                 <p className="product-title">{e.name}</p>
-                                <p>${e.new_price}</p>
-                                <button className="CardItems-quantity">{cartItems[e.id]}</button>
-                                <p>${e.new_price * cartItems[e.id]}</p>
-                                <GrFormSubtract className='cart-remove-photo' onClick={() => {removeFromCart(e.id)}} />
-                                <IoMdAdd className='cart-remove-photo' onClick={() => {addToCart(e.id)}} />
+                                <div className="prices">
+                                    <p><div dangerouslySetInnerHTML={{__html: '&#8358;'}}></div>{e.new_price}</p>
+                                    <p><div dangerouslySetInnerHTML={{__html: '&#8358;'}}></div>{e.new_price * cartItems[e.id]}</p>
+                                </div>
+                            </div>
+                            <div className="add-remove">
+                                <p className="reduce">Increase / Reduce Qty:</p>
+
+                                <div className="add-remove-btn">
+                                    <GrFormSubtract className='cart-remove-photo' onClick={() => {removeFromCart(e.id)}} />
+                                    <button className="CardItems-quantity">{cartItems[e.id]}</button>
+                                    <IoMdAdd className='cart-remove-photo' onClick={() => {addToCart(e.id)}} />
+                                </div>
                             </div>
                             <hr />
                         </div>
@@ -53,7 +56,7 @@ function CartItems() {
                     <div>
                         <div className="CardItems-total-item">
                             <p>Subtotal</p>
-                            <p>${getTotalCartAmount()}</p>
+                            <p><div dangerouslySetInnerHTML={{__html: '&#8358;'}}></div>{getTotalCartAmount()}</p>
                         </div>
                         <hr />
                         <div className="CardItems-total-item">
@@ -63,7 +66,7 @@ function CartItems() {
                         <hr />
                         <div className="CardItems-total-item">
                             <h3>Total</h3>
-                            <h3>${getTotalCartAmount()}</h3>
+                            <h3><div dangerouslySetInnerHTML={{__html: '&#8358;'}}></div>{getTotalCartAmount()}</h3>
                         </div>
                     </div>
                     <button>Proceed To Checkout</button>

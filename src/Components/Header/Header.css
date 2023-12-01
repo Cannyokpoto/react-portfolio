@@ -204,8 +204,8 @@ header .desktopNav .cart .cart-counter{
 
 header .desktopNav .cart:hover .cart-counter{
     background-color: transparent;
-    border: 1px solid var(--energyGrey);
-    color: var(--energyBlack);
+    border: 1px solid var(--energyRed);
+    color: var(--energyRed);
 }
 
 header .logo .nav-icons{
@@ -365,7 +365,7 @@ header .desktopNavv{
 
     header .mobile-navbar .engage{
         height: 50px;
-        width: 30%;
+        width: 40%;
         display: flex;
         flex-direction: column;
     }

@@ -91,6 +91,7 @@
         color: var(--energyBlack);
         border: solid 1px var(--energyLightGrey);
         cursor: pointer;
+        border-radius: 5px;
     }
     
     .descriptionBox .descriptionBox-navigator .fade{
