@@ -42,3 +42,38 @@
     gap: 20px;
     margin-top: 50px;
 }
+
+@media (max-width: 500px){
+
+    .related-products{
+        width: 90vw;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 50px;
+    }
+    
+    .related-products h1{
+        color: var(--energyDarkBlue);
+        font-size: 25px;
+        font-weight: 600;
+    }
+    
+    .related-products hr{
+        width: 20%;
+        height: 7px;
+        border-radius: 10px;
+        background-color: var(--energyDarkBlue);
+    }
+    
+    .related-products .related-products-items{
+        width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+}

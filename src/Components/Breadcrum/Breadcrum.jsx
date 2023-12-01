@@ -9,9 +9,9 @@ function Breadcrum(props) {
 
     return (
         <div className="breadcrum">
-            HOME
+            Home
             <GrNext className="greater" />
-            SHOP
+            Shop
             <GrNext className="greater" />
             {product.category}
             <GrNext className="greater" />
