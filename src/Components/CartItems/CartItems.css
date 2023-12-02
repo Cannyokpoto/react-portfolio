@@ -238,7 +238,7 @@
         padding: 0 10px 0 20px;
         width: 100%;
         text-align: left;
-        font-size: 17px;
+        font-size: 20px;
     }
     
     .CardItems hr{
@@ -305,16 +305,16 @@
     
     .CardItems .CardItems-format-wrapper .add-remove .reduce{
         font-weight: 600;
-        font-size: 14px;
+        font-size: 12px;
     }
     
     .CardItems .CardItems-format-wrapper .add-remove .add-remove-btn{
-        width: 30%;
+        width: 50%;
         height: 100%;
         display: flex;
         flex-direction: row;
         gap: 10px;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         cursor: pointer;
     }

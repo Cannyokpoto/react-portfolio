@@ -30,7 +30,7 @@ function CartItems() {
                                 </div>
                             </div>
                             <div className="add-remove">
-                                <p className="reduce">Increase / Reduce Qty:</p>
+                                <p className="reduce">Increase / Reduce Qty</p>
 
                                 <div className="add-remove-btn">
                                     <GrFormSubtract className='cart-remove-photo' onClick={() => {removeFromCart(e.id)}} />
