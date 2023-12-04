@@ -30,7 +30,7 @@ function Hero(){
 
                 <div className="hero-section2">
                     <div className="hero-wrapper">
-                    <h2>NEW ARRIVALS ONLY</h2>
+                        <h2>NEW ARRIVALS ONLY</h2>
 
                         <div className="top-sub">
                             <p>new</p>

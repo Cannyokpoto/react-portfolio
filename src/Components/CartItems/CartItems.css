@@ -316,7 +316,7 @@
         gap: 10px;
         justify-content: space-around;
         align-items: center;
-        cursor: pointer;
+        cursor: default;
     }
     
     .CardItems .CardItems-format-wrapper .add-remove .add-remove-btn .CardItems-quantity{
