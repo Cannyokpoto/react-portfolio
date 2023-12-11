@@ -102,11 +102,13 @@ const ServicesStyles = styled.div`
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            margin-top: 150px;
+            margin-top: 50px;
+            gap: 40px;
 
     h2{
             color: ${({ theme: { theme } }) =>
             theme === ThemeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_1)'};
+            font-size: 30px;
         }
 
         .services-wrapper{
@@ -116,10 +118,10 @@ const ServicesStyles = styled.div`
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            gap: 10px;
+            gap: 20px;
 
             .service{
-                width: 100%;
+                width: 70%;
                 height: 250px;
                 display: flex;
                 flex-direction: column;
@@ -129,6 +131,7 @@ const ServicesStyles = styled.div`
                 padding-left: 20px;
                 border-radius: 10px;
                 cursor: pointer;
+                background-color: var(--mediumSlateBlue);
 
                 &:hover{
                     background-color: var(--mediumSlateBlue);
@@ -159,10 +162,10 @@ const ServicesStyles = styled.div`
                     align-items: center;
                     justify-content: center;
                     border-radius: 60%;
-                    background-color: var(--mediumSlateBlue);
+                    background-color: var(--lightBlue_1);
 
                     .icon{
-                        color: var(--lightBlue_1);
+                        color: var(--mediumSlateBlue);
                         width: 60%;
                         height: 79px;
                     }
@@ -172,12 +175,16 @@ const ServicesStyles = styled.div`
                     color: ${({ theme: { theme } }) =>
                     theme === ThemeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_1)'};
                     font-size: 20px;
+                    color: var(--lightBlue_1);
+
                 }
 
                 p{
                     color: ${({ theme: { theme } }) =>
                     theme === ThemeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_1)'};
                     font-size: 17px;
+                    color: var(--lightBlue_1);
+
                 }
             }
         }

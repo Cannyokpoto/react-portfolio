@@ -75,11 +75,14 @@ const HeroStyles = styled.div`
 
     .left-hand-side{
         width: 100%;
-        height: 50%;
+        height: 45%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: center;
+        justify-content: flex-end;
+        gap: 0;
+        position: relative;
+        top: -20px;
 
         h1{
             font-size: 25px;
@@ -90,13 +93,13 @@ const HeroStyles = styled.div`
         p{
             color: ${({ theme: { theme } }) =>
             theme === ThemeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_1)'};
-            font-size: 17px;
+            font-size: 15px;
         }
 
         button{
             background-color: var(--mediumSlateBlue);
             color:  var(--lightBlue_1);
-            width: 30%;
+            width: 40%;
             height: 50px;
             padding: 2px;
             margin-top: 17px;
