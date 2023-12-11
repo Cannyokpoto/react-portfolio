@@ -3,7 +3,7 @@ import PHOTOS from "../Assets/index";
 import styled from "styled-components";
 import ThemeList from '../Data/ThemeList';
 
-const HeroStyles = styled.div`
+const AboutStyles = styled.div`
 
     width: 90vw;
     height: 75vh;
@@ -15,25 +15,33 @@ const HeroStyles = styled.div`
 
     .left-hand-side{
         width: 33%;
-        height: 100%;
+        height: 79%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
 
+
+        span{
+            color: var(--mediumSlateBlue);
+            font-size: 15px;
+        }
+
         h1{
-            font-size: 55px;
+            font-size: 40px;
             color: ${({ theme: { theme } }) =>
             theme === ThemeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_1)'};
         }
 
         p{
             color: ${({ theme: { theme } }) =>
-            theme === ThemeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_1)'};
-            font-size: 20px;
-        }
+            theme === ThemeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_2)'};
+            font-size: 15px;
+            line-height: 1.5;
+            }
+        
 
-        button{
+            button{
             background-color: var(--mediumSlateBlue);
             color:  var(--lightBlue_1);
             width: 35%;
@@ -48,7 +56,9 @@ const HeroStyles = styled.div`
             border-radius: 5px;
             font-size: 15px;
         }
-    }
+        
+        }
+
 
     .right-hand-side{
         width: 50%;
@@ -67,13 +77,15 @@ const HeroStyles = styled.div`
         width: 90vw;
         height: 75vh;
         display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-        justify-content: space-around;
-        margin-top: 120px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: 50px;
+        gap: 20px;
 
-
-    .left-hand-side{
+        
+        
+        .left-hand-side{
         width: 100%;
         height: 50%;
         display: flex;
@@ -81,25 +93,33 @@ const HeroStyles = styled.div`
         align-items: flex-start;
         justify-content: center;
 
+
+        span{
+            color: var(--mediumSlateBlue);
+            font-size: 15px;
+        }
+
         h1{
             font-size: 25px;
             color: ${({ theme: { theme } }) =>
-            theme === ThemeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_1)'};
+            theme === ThemeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_1)'}
         }
 
         p{
             color: ${({ theme: { theme } }) =>
-            theme === ThemeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_1)'};
-            font-size: 17px;
+            theme === ThemeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_2)'};
+            font-size: 15px;
+            line-height: 1.5;
         }
+        
 
         button{
             background-color: var(--mediumSlateBlue);
             color:  var(--lightBlue_1);
-            width: 30%;
-            height: 50px;
+            width: 35%;
+            height: 55px;
             padding: 2px;
-            margin-top: 17px;
+            margin-top: 30px;
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -108,41 +128,48 @@ const HeroStyles = styled.div`
             border-radius: 5px;
             font-size: 15px;
         }
-    }
+        
+        }
 
-    .right-hand-side{
+        .right-hand-side{
         width: 100%;
-        height: 250px;
+        height: 200px;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
 
         img{
             width: 100%;
             height: 100%;
         }
     }
+    
     }
+
+
 `;
 
-function Hero(){
+function About(){
 
         return(
-            <HeroStyles className="hero-section">
-                <div className="left-hand-side">
-                    <h1>A Click Of <br /> Rare Images</h1>
-                    <p>Because every picture tells a story, let us help you tell yours.</p>
-                    <button>Get In Touch</button>
-                </div>
+            <AboutStyles className="hero-section">
         
                 <div className="right-hand-side">
-                    <img src={PHOTOS.HERO} alt=""/>
+                    <img src={PHOTOS.ABOUT} alt=""/>
                 </div>
-            </HeroStyles>
+
+                <div className="left-hand-side">
+                    <span>Who Are We</span>
+                    <h1>Capturing life as it happens</h1>
+                    <p>Rare images is a professional photography brand. Our 
+                        Goal is to capture your happy moments and keep the memories alive.</p>
+                    <button>Get In Touch</button>
+                </div>
+            </AboutStyles>
         )
 };
 
 
     
 
-export default Hero;
+export default About;
