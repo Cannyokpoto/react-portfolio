@@ -155,7 +155,7 @@ const ServicesStyles = styled.div`
 
 
                     span{
-                    width: 12%;
+                    width: 15%;
                     height: 50px;
                     display: flex;
                     flex-direction: row;
@@ -163,6 +163,7 @@ const ServicesStyles = styled.div`
                     justify-content: center;
                     border-radius: 60%;
                     background-color: var(--lightBlue_1);
+                    padding: 2px;
 
                     .icon{
                         color: var(--mediumSlateBlue);
