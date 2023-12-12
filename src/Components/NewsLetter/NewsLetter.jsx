@@ -88,9 +88,9 @@ const NewsLetterStyles = styled.div`
 
         form{
             width: 90%;
-            height: 50px;
+            height: 120px;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             gap: 10px;
@@ -100,8 +100,8 @@ const NewsLetterStyles = styled.div`
             input{
                 background-color: var(--lightBlue_1);
                 font-size: 15px;
-                width: 65%;
-                height: 100%;
+                width: 100%;
+                height: 40px;
                 padding: 10px;
                 border-radius: 4px;
                 border: none;
@@ -110,8 +110,8 @@ const NewsLetterStyles = styled.div`
         button{
             background-color: var(--lightBlue_1);
             color: var(--darkBlue_2);
-            width: 20%;
-            height: 100%;
+            width: 30%;
+            height: 40px;
             padding: 2px;
             display: flex;
             flex-direction: row;

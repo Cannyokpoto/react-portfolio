@@ -155,7 +155,7 @@ const ServicesStyles = styled.div`
 
 
                     span{
-                    width: 15%;
+                    width: 17%;
                     height: 50px;
                     display: flex;
                     flex-direction: row;
