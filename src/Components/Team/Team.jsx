@@ -1,12 +1,12 @@
 import React from "react";
-import PHOTOS from "../Assets/index";
+import TeamObject from "./TeamObject";
 import styled from "styled-components";
 import ThemeList from '../Data/ThemeList';
 
 const TeamStyles = styled.div`
 
     width: 90vw;
-    height: 320px;
+    height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -38,21 +38,21 @@ const TeamStyles = styled.div`
         width: 80%;
         height: 100%;
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px;
 
             .member{
             width: 30%;
-            height: 100%;
+            height: 300px;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
-            gap: 15px;
+            margin-top: 20px;
+            gap: 5px;
 
                 img{
-                width: 100%;
+                width: 90%;
                 height: 90%;
                 border-radius: 10px;
             }
@@ -154,30 +154,19 @@ function Team(){
                 </div>
         
                 <div className="members">
-                    <div className="member">
-                        <img src={PHOTOS.TEAM1} alt=""/>
-                        <div className="details">
-                            <h4>Rasu</h4>
-                            <p>Photo Editor</p>
-                        </div>
-                    </div>
-
-                    <div className="member">
-                        <img src={PHOTOS.TEAM2} alt=""/>
-                        <div className="details">
-                            <h4>Shaif Arfan</h4>
-                            <p>Photographer</p>
-                        </div>
-                    </div>
-
-                    <div className="member">
-                        <img src={PHOTOS.TEAM3} alt=""/>
-                        <div className="details">
-                            <h4>Ayan Bilai</h4>
-                            <p>Photographer</p>
-                        </div>
-                    </div>
-                    
+                    {
+                        TeamObject.map((member) => {
+                            return(
+                                <div className="member">
+                                    <img src={member.image} alt=""/>
+                                    <div className="details">
+                                        <h4>{member.name}</h4>
+                                        <p>{member.position}</p>
+                                    </div>
+                                </div>
+                            )
+                        })
+                    }
                 </div>
             </TeamStyles>
         )

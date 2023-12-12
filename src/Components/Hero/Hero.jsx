@@ -134,7 +134,7 @@ function Hero(){
             <HeroStyles className="hero-section">
                 <div className="left-hand-side">
                     <h1>A Click Of <br /> Rare Images</h1>
-                    <p>Because every picture tells a story, let us help you tell yours.</p>
+                    <p>Every picture tells a story, let's help you tell yours.</p>
                     <button>Get In Touch</button>
                 </div>
         
