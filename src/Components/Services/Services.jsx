@@ -121,14 +121,14 @@ const ServicesStyles = styled.div`
             gap: 20px;
 
             .service{
-                width: 70%;
+                width: 100%;
                 height: 250px;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
                 justify-content: center;
                 gap: 20px;
-                padding-left: 20px;
+                padding: 20px;
                 border-radius: 10px;
                 cursor: pointer;
                 background-color: var(--mediumSlateBlue);
@@ -155,7 +155,7 @@ const ServicesStyles = styled.div`
 
 
                     span{
-                    width: 15%;
+                    width: 12%;
                     height: 50px;
                     display: flex;
                     flex-direction: row;
@@ -182,7 +182,7 @@ const ServicesStyles = styled.div`
                 p{
                     color: ${({ theme: { theme } }) =>
                     theme === ThemeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_1)'};
-                    font-size: 17px;
+                    font-size: 15px;
                     color: var(--lightBlue_1);
 
                 }
