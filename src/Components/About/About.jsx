@@ -152,7 +152,7 @@ const AboutStyles = styled.div`
 function About(){
 
         return(
-            <AboutStyles className="hero-section">
+            <AboutStyles className="hero-section" id="about">
         
                 <div className="right-hand-side">
                     <img src={PHOTOS.ABOUT} alt=""/>

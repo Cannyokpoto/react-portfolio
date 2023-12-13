@@ -1,7 +1,7 @@
 import "./Header.css";
 import React from "react";
 import styled from "styled-components";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import PHOTOS from "../Assets/index";
 import { Link } from 'react-scroll';
 import { ThemeSwitcher , ThemeSwitcher2} from "../ThemeSwitcher/ThemeSwitcher";
@@ -202,18 +202,18 @@ const HeaderStyles = styled.header`
     }
 }
 
-
-
-
 `;
 
 function Header(){
 
     //Mobile Navbar
+    
 
     const [click, setClick] = useState(false);
 
-    const handleClick = () => setClick(!click);
+    const handleClick = () => {
+        setClick(!click)
+    };
 
 
         return(
@@ -234,10 +234,10 @@ function Header(){
 
                 <nav className="desktopNav">
                     <ul className="myNav">
-                        <li><Link to="/home" onClick={handleClick}>Home</Link></li>
-                        <li><Link to="/services" onClick={handleClick}>Services</Link></li>
-                        <li><Link to="/about" onClick={handleClick}>About</Link></li>
-                        <li><Link to="/contact" onClick={handleClick}>Contact</Link></li>
+                        <li><Link to="hero" onClick={handleClick} spy={true} smooth={true} offset={-200} duration={500}>Home</Link></li>
+                        <li><Link to="services" onClick={handleClick} spy={true} smooth={true} offset={-200} duration={500} >Services</Link></li>
+                        <li><Link to="about" onClick={handleClick} spy={true} smooth={true} offset={-100} duration={500}>About</Link></li>
+                        <li><Link to="contact" onClick={handleClick} spy={true} smooth={true} offset={-100} duration={500}>Contact</Link></li>
                     </ul>
 
                     <div className="theme2">
@@ -252,10 +252,10 @@ function Header(){
                 <nav className={click ? "mobile-navbar mobile-navbar-open" : "mobile-navbar"}>
 
                     <ul className="mobile-navbar-items">
-                        <li><Link to="/" onClick={handleClick}>Home</Link></li>
-                        <li><Link to="/services" onClick={handleClick}>Services</Link></li>
-                        <li><Link to="/about" onClick={handleClick}>About</Link></li>
-                        <li><Link to="/contact" onClick={handleClick}>Contact</Link></li>
+                        <li><Link to="hero" onClick={handleClick} spy={true} smooth={true} offset={-200} duration={500}>Home</Link></li>
+                        <li><Link to="services" onClick={handleClick} spy={true} smooth={true} offset={-80} duration={500}>Services</Link></li>
+                        <li><Link to="about" onClick={handleClick} spy={true} smooth={true} offset={-100} duration={500}>About</Link></li>
+                        <li><Link to="contact" onClick={handleClick} spy={true} smooth={true} offset={-100} duration={500}>Contact</Link></li>
                     </ul>
 
                     <div className="theme">

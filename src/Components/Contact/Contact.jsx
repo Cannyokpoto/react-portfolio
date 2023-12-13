@@ -246,7 +246,7 @@ const ContactStyles = styled.div`
 function Contact(){
 
         return(
-            <ContactStyles className="hero-section">
+            <ContactStyles className="hero-section" id="contact">
                 <div className="tag">
                     <h2>Get In Touch</h2>
                     <p>We would love to hear from you.</p>

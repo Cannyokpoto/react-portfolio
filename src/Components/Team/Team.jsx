@@ -9,7 +9,7 @@ const TeamStyles = styled.div`
     height: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     margin-top: 150px;
 

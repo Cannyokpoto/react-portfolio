@@ -131,7 +131,7 @@ const HeroStyles = styled.div`
 function Hero(){
 
         return(
-            <HeroStyles className="hero-section">
+            <HeroStyles className="hero-section" id="hero">
                 <div className="left-hand-side">
                     <h1>A Click Of <br /> Rare Images</h1>
                     <p>Every picture tells a story, let's help you tell yours.</p>

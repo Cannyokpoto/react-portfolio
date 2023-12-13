@@ -1,4 +1,4 @@
-import React from "react";
+import { React } from "react";
 import styled from "styled-components";
 import ThemeList from '../Data/ThemeList';
 import { GrGallery } from "react-icons/gr";
@@ -193,10 +193,10 @@ const ServicesStyles = styled.div`
     
 `;
 
-function Services(){
+function Services(props){
 
         return(
-            <ServicesStyles className="services">
+            <ServicesStyles className="services" id="services">
                 <h2>Our Services</h2>
         
                 <div className="services-wrapper">
