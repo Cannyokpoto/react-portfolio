@@ -275,7 +275,7 @@ const ProjectsStyles = styled.div`
             
 
             .deployed{
-                width: 40%;
+                width: 43%;
                 height: 100%;
                 display: flex;
                 flex-direction: row;
@@ -284,7 +284,7 @@ const ProjectsStyles = styled.div`
                 border-radius: 4px;
                 gap: 5px;
                 color: #fafafa;
-                font-size: 15px;
+                font-size: 13px;
                 padding: 3px;
                 background-color: black;
 
@@ -302,7 +302,7 @@ const ProjectsStyles = styled.div`
             }
 
             .source{
-                width: 40%;
+                width: 43%;
                 height: 100%;
                 display: flex;
                 flex-direction: row;
@@ -311,7 +311,7 @@ const ProjectsStyles = styled.div`
                 gap: 5px;
                 color: black;
                 border: solid 1px black;
-                font-size: 15px;
+                font-size: 13px;
                 padding: 4px;
                 border-radius: 4px;
                 

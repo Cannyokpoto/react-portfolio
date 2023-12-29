@@ -125,7 +125,7 @@ const HeroStyles = styled.div`
             flex-direction: row;
             align-items: center;
             justify-content: flex-start;
-            gap: 30px;
+            gap: 0;
             margin-top: 20px;
 
             .tag{
@@ -149,7 +149,7 @@ const HeroStyles = styled.div`
 
                 img{
                     width: 12%;
-                    height: 60%;
+                    height: 70%;
                 }
             }
         }
