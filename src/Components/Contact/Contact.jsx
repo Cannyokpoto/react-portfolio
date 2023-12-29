@@ -215,7 +215,7 @@ const ContactStyles = styled.div`
         button{
                 background-color: var(--cannyBlue);
                 color: white;
-                width: 40%;
+                width: 50%;
                 height: 50px;
                 padding: 2px;
                 display: flex;

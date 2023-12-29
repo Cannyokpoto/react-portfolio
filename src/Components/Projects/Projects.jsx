@@ -70,20 +70,38 @@ const ProjectsStyles = styled.div`
         align-items: flex-start;
         gap: 20px;
 
-        img{
-            width: 60px;
-            height: 30px;
+        h3{
+            font-size: 20px;
+        }
+
+        p{
+            font-size: 15px;
+            line-height: 1.5;
         }
 
         .tools{
             font-size: 20px;
-            width: 20%;
+            width: 40%;
             height: 50px;
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
-            color: gray;
+
+            
+            p{
+                font-weight: 700;
+                color: black;
+            }
+
+            h5{
+                color: gray;
+
+                span{
+                    font-weight: 700;
+                    color: black;
+                }
+            }
         }
 
         .code-demo{
@@ -96,18 +114,24 @@ const ProjectsStyles = styled.div`
             justify-content: space-between;
             
 
-            a{
-                width: 40%;
+            .deployed{
+                width: 45%;
                 height: 100%;
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                justify-content: flex-start;
+                justify-content: center;
+                border-radius: 4px;
                 gap: 5px;
-                color: black;
+                color: #fafafa;
+                font-size: 15px;
+                padding: 3px;
+                background-color: black;
 
-                h5{
-                    font-size: 15px;
+                &:hover{
+                    background-color: transparent;
+                    color: black;
+                    border: solid 1px black;
                 }
 
                 
@@ -116,36 +140,33 @@ const ProjectsStyles = styled.div`
                     height: 50%;
                 }
             }
-        }
 
-        p{
-            font-size: 15px;
-            }
-
-        .reasons{
-            width: 100%;
-            height: 90%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-
-
-                .reason{
-                width: 100%;
-                height: 50px;
+            .source{
+                width: 40%;
+                height: 100%;
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                gap: 20px;
-
-
-                p{
-                    font-size: 17px;
+                justify-content: center;
+                gap: 5px;
+                color: black;
+                border: solid 1px black;
+                font-size: 15px;
+                padding: 4px;
+                border-radius: 4px;
+                
+                &:hover{
+                    color: #fafafa;
+                    background-color: black;
+                }
+                
+                .demo{
+                    width: 20%;
+                    height: 50%;
                 }
             }
         }
-    }
+}
 
     @media (max-width: 500px){
         
@@ -153,7 +174,7 @@ const ProjectsStyles = styled.div`
         height: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         margin-top: 70px;
         gap: 30px;
@@ -163,7 +184,7 @@ const ProjectsStyles = styled.div`
         height: 50px;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
 
         >h1{
@@ -173,13 +194,12 @@ const ProjectsStyles = styled.div`
 
         >p{
             font-size: 20px;
-            text-align: center;
         }
     }
 
     .project{
         width: 100%;
-        height: 450px;
+        height: 600px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -220,6 +240,7 @@ const ProjectsStyles = styled.div`
 
         p{
             font-size: 15px;
+            line-height: 1.5;
         }
 
         .tools{
@@ -229,13 +250,23 @@ const ProjectsStyles = styled.div`
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content: space-between;
-            color: gray;
+            justify-content: flex-start;
+            gap: 30px;
+            
+
+            p{
+                font-weight: 700;
+                color: black;
+            }
+
+            h5{
+                color: gray;
+            }
         }
 
         .code-demo{
             font-size: 17px;
-            width: 70%;
+            width: 100%;
             height: 50px;
             display: flex;
             flex-direction: row;
@@ -243,18 +274,24 @@ const ProjectsStyles = styled.div`
             justify-content: space-between;
             
 
-            a{
+            .deployed{
                 width: 40%;
                 height: 100%;
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                justify-content: flex-start;
+                justify-content: center;
+                border-radius: 4px;
                 gap: 5px;
-                color: black;
+                color: #fafafa;
+                font-size: 15px;
+                padding: 3px;
+                background-color: black;
 
-                h5{
-                    font-size: 15px;
+                &:hover{
+                    background-color: transparent;
+                    color: black;
+                    border: solid 1px black;
                 }
 
                 
@@ -263,6 +300,32 @@ const ProjectsStyles = styled.div`
                     height: 50%;
                 }
             }
+
+            .source{
+                width: 40%;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+                color: black;
+                border: solid 1px black;
+                font-size: 15px;
+                padding: 4px;
+                border-radius: 4px;
+                
+                &:hover{
+                    color: #fafafa;
+                    background-color: black;
+                }
+                
+                .demo{
+                    width: 20%;
+                    height: 50%;
+                }
+            }
+            
         }
 
         p{
@@ -297,19 +360,19 @@ function Projects(){
                                     <p>{project.description}</p>
 
                                     <div className="tools"> 
-                                        <h5>React</h5>
-                                        <h5>CSS</h5>
+                                        <p>Tools:</p>
+                                        <h5>React <span>|</span> CSS</h5>
                                     </div>
 
                                     <div className="code-demo">
-                                        <a href={project.code}>
-                                            <h5>Code</h5>
-                                            <IoLogoGithub className="demo" />
+                                        <a href={project.demo} className="deployed">
+                                            Live Site
+                                            <FaExternalLinkAlt className="demo" />
                                         </a>
 
-                                        <a href={project.demo}>
-                                            <h5>Live Demo</h5>
-                                            <FaExternalLinkAlt className="demo" />
+                                        <a href={project.code} className="source">
+                                            Source Code
+                                            <IoLogoGithub className="demo" />
                                         </a>
                                     </div>
                                 </div>

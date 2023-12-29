@@ -75,15 +75,15 @@ const AboutStyles = styled.div`
 
     .left-hand-side{
         width: 100%;
-        height: 190px;
+        height: 210px;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: flex-start;
 
 
         img{
-            width: 60%;
+            width: 90%;
             height: 100%;
         }
 
@@ -95,7 +95,7 @@ const AboutStyles = styled.div`
         height: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         gap: 20px;
 
 
@@ -107,7 +107,6 @@ const AboutStyles = styled.div`
 
         h1{
             font-size: 25px;
-            text-align: center;
         }
 
         .usp{
@@ -120,6 +119,7 @@ const AboutStyles = styled.div`
 
                 p{
                 font-size: 15px;
+                line-height: 1.5;
             }
         }
     }   

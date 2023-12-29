@@ -13,7 +13,7 @@ const HeroStyles = styled.div`
     margin-top: 130px;
 
     .left-hand-side{
-        width: 50%;
+        width: 45%;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -71,7 +71,7 @@ const HeroStyles = styled.div`
     }
 
     .right-hand-side{
-        width: 30%;
+        width: 45%;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -124,12 +124,12 @@ const HeroStyles = styled.div`
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content: space-between;
-            gap: 0;
+            justify-content: flex-start;
+            gap: 30px;
             margin-top: 20px;
 
             .tag{
-                width: 35%;
+                width: 25%;
                 height: 100%;
                 display: flex;
                 flex-direction: row;
@@ -145,11 +145,12 @@ const HeroStyles = styled.div`
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: flex-start;
+                gap: 15px;
 
                 img{
-                    width: 9%;
-                    height: 40%;
+                    width: 12%;
+                    height: 50%;
                 }
             }
         }
@@ -157,13 +158,13 @@ const HeroStyles = styled.div`
 
     .right-hand-side{
         width: 100%;
-        height: 40%;
+        height: 50%;
         display: flex;
         flex-direction: column;
         align-items: center;
 
         img{
-            width: 40%;
+            width: 70%;
             height: 100%;
         }
     }
