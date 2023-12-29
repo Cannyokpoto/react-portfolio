@@ -129,7 +129,7 @@ const HeroStyles = styled.div`
             margin-top: 20px;
 
             .tag{
-                width: 25%;
+                width: 35%;
                 height: 100%;
                 display: flex;
                 flex-direction: row;
@@ -137,6 +137,7 @@ const HeroStyles = styled.div`
                 justify-content: flex-start;
                 gap: 10px;
                 font-size: 15px;
+                border: dashed;
             }
 
             .stack{
@@ -145,8 +146,7 @@ const HeroStyles = styled.div`
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                justify-content: flex-start;
-                gap: 15px;
+                justify-content: space-around;
 
                 img{
                     width: 12%;
