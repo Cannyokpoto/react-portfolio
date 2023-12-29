@@ -1,7 +1,6 @@
 import React from "react";
 import PHOTOS from "../Assets/index";
 import styled from "styled-components";
-import ThemeList from '../Data/ThemeList';
 
 const HeroStyles = styled.div`
 
@@ -10,48 +9,69 @@ const HeroStyles = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    margin-top: 150px;
+    justify-content: center;
+    margin-top: 130px;
 
     .left-hand-side{
-        width: 33%;
+        width: 50%;
         height: 100%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
 
+
         h1{
             font-size: 55px;
-            color: ${({ theme: { theme } }) =>
-            theme === ThemeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_1)'};
+
+            span{
+                color: var(--cannyBlue);
+            }
         }
 
         p{
-            color: ${({ theme: { theme } }) =>
-            theme === ThemeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_1)'};
             font-size: 20px;
+            color: var(--darkGrey);
         }
 
-        button{
-            background-color: var(--mediumSlateBlue);
-            color:  var(--lightBlue_1);
-            width: 35%;
+        .tech-stack{
+            width: 100%;
             height: 55px;
-            padding: 2px;
-            margin-top: 30px;
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content: center;
-            border: none;
-            border-radius: 5px;
-            font-size: 15px;
+            justify-content: flex-start;
+            gap: 50px;
+            margin-top: 50px;
+
+            .tag{
+                width: 27%;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 10px;
+            }
+
+            .stack{
+                width: 50%;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                img{
+                    width: 9%;
+                    height: 40%;
+                }
+            }
         }
     }
 
     .right-hand-side{
-        width: 50%;
+        width: 30%;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -63,69 +83,91 @@ const HeroStyles = styled.div`
         }
     }
 
+
     @media (max-width: 500px){
+    
         width: 90vw;
-        height: 70vh;
+        height: 450px;
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
-        justify-content: space-around;
-        margin-top: 100px;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 50px;
 
 
     .left-hand-side{
         width: 100%;
-        height: 45%;
+        height: 40%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: flex-end;
-        gap: 0;
-        position: relative;
-        top: -20px;
+        justify-content: center;
+
 
         h1{
             font-size: 25px;
-            color: ${({ theme: { theme } }) =>
-            theme === ThemeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_1)'};
+
+            span{
+                color: var(--cannyBlue);
+            }
         }
 
         p{
-            color: ${({ theme: { theme } }) =>
-            theme === ThemeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_1)'};
             font-size: 15px;
+            color: var(--darkGrey);
         }
 
-        button{
-            background-color: var(--mediumSlateBlue);
-            color:  var(--lightBlue_1);
-            width: 40%;
-            height: 50px;
-            padding: 2px;
-            margin-top: 17px;
+        .tech-stack{
+            width: 100%;
+            height: 55px;
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content: center;
-            border: none;
-            border-radius: 5px;
-            font-size: 15px;
+            justify-content: space-between;
+            gap: 0;
+            margin-top: 20px;
+
+            .tag{
+                width: 35%;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 10px;
+                font-size: 15px;
+            }
+
+            .stack{
+                width: 60%;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                img{
+                    width: 9%;
+                    height: 40%;
+                }
+            }
         }
     }
 
     .right-hand-side{
         width: 100%;
-        height: 250px;
+        height: 40%;
         display: flex;
         flex-direction: column;
         align-items: center;
 
         img{
-            width: 100%;
+            width: 40%;
             height: 100%;
         }
     }
-    }
+}
 `;
 
 function Hero(){
@@ -133,9 +175,23 @@ function Hero(){
         return(
             <HeroStyles className="hero-section" id="hero">
                 <div className="left-hand-side">
-                    <h1>A Click Of <br /> Rare Images</h1>
-                    <p>Every picture tells a story, let's help you tell yours.</p>
-                    <button>Get In Touch</button>
+                    <h1>Front-End <span>React Developer</span></h1>
+
+                    <p>Hi, I'm Promise Okpoto, a passionate front-end react developer based in Lagos state, Nigeria.</p>
+
+                    <div className="tech-stack">
+                        <div className="tag">
+                            <h5>Tech Stack</h5>
+                            <span>|</span>
+                        </div>
+
+                        <div className="stack">
+                            <img src={PHOTOS.html} alt="html" />
+                            <img src={PHOTOS.css} alt="css" />
+                            <img src={PHOTOS.js} alt="js" />
+                            <img src={PHOTOS.reactjs} alt="react" />
+                        </div>
+                    </div>
                 </div>
         
                 <div className="right-hand-side">

@@ -3,16 +3,25 @@ const PHOTOS = {
     
 
     //EXTRAS
-    ABOUT: require("./about.png"),
+    about: require("./about.png"),
     HERO: require("./hero.png"),
-    rareFave: require("./rare fave.png"),
-    LOGO:    require("./rare logo.png"),
-    TEAM1:  require("./team1.avif"),
-    TEAM2:  require("./team2.avif"),
-    TEAM3:  require("./team3.avif"),
-    TEAM4:  require("./team4.avif"),
-    TEAM5:  require("./team5.avif"),
-    TEAM6:  require("./team6.avif"),
+    LOGO:   require("./rp logo.png"),
+    LOGO_W:   require("./gf logo w.png"),
+    
+    html:  require("./html.png"),
+    css:  require("./css.jpg"),
+    js:  require("./js.png"),
+    reactjs:  require("./React.png"),
+    project1:  require("./Rare Image.png"),
+    project5:  require("./my farm.png"),
+    project4:  require("./energy mall.png"),
+    project3:  require("./get fit.png"),
+    project2:  require("./Budget mart.png"),
+    logo1:  require("./rare logo.png"),
+    logo2:  require("./budget mart logo.png"),
+    logo3:  require("./gf logo b.png"),
+    logo4:  require("./Energy mall logo.png"),
+    logo5:  require("./mama saed logo.png"),
 };
 
 export default PHOTOS;

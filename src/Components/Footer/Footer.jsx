@@ -1,55 +1,27 @@
 import React from "react";
-import PHOTOS from "../Assets/index";
 import styled from "styled-components";
-import { Link } from 'react-scroll';
 import { FaInstagram } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
+import { MdMailOutline } from "react-icons/md";
+import { FaLinkedin } from "react-icons/fa6";
 
 const FooterStyles = styled.footer`
 
     margin-top: 50px;
-    height: 250px;
+    height: 100px;
     width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    background-color: var(--darkBlue_3);
+    background-color: var(--black);
     padding: 20px 0 20px 0;
     color: var(--white);
+    margin-top: 100px;
 
 
-        img{
-        width: 10%;
-        height: 40px;
-    }
-
-
-
-        .quick-links{
-    width: 40%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-    font-weight: 600;
-
-        li{
-    list-style: none;
-            
-
-            a{
-            font-size: 17px;
-            text-decoration: none;
-        }
-
-        &:hover{
-            color: var(--mediumSlateBlue);
-        }
-    }
-}
 
 
     .socials{
@@ -61,101 +33,89 @@ const FooterStyles = styled.footer`
 
             .my-soc{
                 font-weight: 600;
-                font-size: 20px;
+                font-size: 15px;
+                color: white;
             }
     } 
 
     hr{
-        width: 80vw;
+        width: 100vw;
         height: 1px;
-        background-color: var(--mediumSlateBlue);
+        background-color: var(--cannyBlue);
         opacity: 0.3;
     }
 
     small{
         font-size: 14px;
         opacity: .7;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 40vw;
+        gap: 10px;
+
 
         span{
-            color: var(--mediumSlateBlue);
+            color: var(--cannyBlue);
             opacity: 1;
         }
     }
 
 @media (max-width: 500px){
 
-        height: 230px;
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
-        padding: 20px 0 20px 0;
-    
-     img{
-        width: 30%;
-        height: 50px;
-    }
-    
-    
-    
-    .quick-links{
-        width: 90%;
-        height: 40px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        gap: 0;
-        font-weight: 600;
+    margin-top: 50px;
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--black);
+    padding: 20px 0 20px 0;
+    color: var(--white);
+    margin-top: 100px;
 
-        li{
-            list-style: none;
 
-            a{
-                font-size: 12px;
-                text-decoration: none;
-            }
-        }
-    }
+
 
     .socials{
-            width: 100%;
-            height: 30px;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            gap: 30px;
-            position: relative;
-            top: 15px;
-            padding-bottom: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
 
             .my-soc{
-                font-weight: 400;
-                font-size: 50px;
-            }
-        } 
-
-
-        hr{
-            width: 90%;
-            height: 1px;
-            background-color: var(--mediumSlateBlue);
-        }
-    
-        small{
-            font-size: 14px;
-            opacity: .6;
-            font-family: 'Poppins', sans-serif;
-
-            span{
-                font-size: 14px;
-                opacity: 1;
                 font-weight: 600;
-                color: var(--mediumSlateBlue);
+                font-size: 15px;
+                color: white;
             }
+    } 
+
+    hr{
+        width: 100vw;
+        height: 1px;
+        background-color: var(--cannyBlue);
+        opacity: 0.3;
+    }
+
+    small{
+        font-size: 12px;
+        opacity: .7;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 100vw;
+        gap: 10px;
+
+
+        span{
+            color: var(--cannyBlue);
+            opacity: 1;
+            display: flex;
         }
+    }   
 }
 `;
 
@@ -164,20 +124,15 @@ function Footer(){
 
         return(
             <FooterStyles className="my-footer">
-                <img src={ PHOTOS.LOGO } alt="logo" />
-                <ul className="quick-links">
-                    <li><Link to="/home" >Home</Link></li>
-                    <li><Link to="/services">Services</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/contact">Contact</Link></li>
-                </ul>
                 <div className="socials">
-                    <Link to="/"><FaInstagram className="my-soc" /></Link>
-                    <Link to="/"><FaFacebook className="my-soc" /></Link>
-                    <Link to="/"><FaWhatsapp className="my-soc" /></Link>
+                    <a href="https://www.instagram.com/canny_okpoto"><FaInstagram className="my-soc" /></a>
+                    <a href="https://www.facebook.com/promise.okpoto"><FaFacebook className="my-soc" /></a>
+                    <a href="https://wa.me/2348138957283"><FaWhatsapp className="my-soc" /></a>
+                    <a href="mailto:promiseokpoto5050@gmail.com"><MdMailOutline className="my-soc" /></a>
+                    <a href="https://www.linkedin.com/in/promise-okpoto-8ba746231"><FaLinkedin className="my-soc" /></a>
                 </div>
                 <hr/>
-                <small>Developed by <span>Promise Okpoto</span></small>
+                <small>Copyright <div dangerouslySetInnerHTML={{__html: '&#169;'}}></div> 2023. All rights reserved <span>Promise Okpoto</span></small>
             </FooterStyles>
         )
 };

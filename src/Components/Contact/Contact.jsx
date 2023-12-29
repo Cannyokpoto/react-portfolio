@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import ThemeList from '../Data/ThemeList';
 
 const ContactStyles = styled.div`
 
-    width: 70vw;
+    width: 50vw;
     height: 550px;
     display: flex;
     flex-direction: column;
@@ -15,7 +14,7 @@ const ContactStyles = styled.div`
     gap: 15px;
 
     .tag{
-        width: 40%;
+        width: 79%;
         height: 70px;
         display: flex;
         flex-direction: column;
@@ -26,15 +25,20 @@ const ContactStyles = styled.div`
 
         
     h2{
-            font-size: 40px;
-            color: ${({ theme: { theme } }) =>
-            theme === ThemeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_1)'};
+            font-size: 30px;
+            color: var(--cannyBlue);
+            text-align: center;
         }
 
         p{
-            color: ${({ theme: { theme } }) =>
-            theme === ThemeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_2)'};
             font-size: 15px;
+            text-align: center;
+            margin-top: 20px;
+
+            a{
+                font-weight: 700;
+                color: var(--black);
+            }
         }
     }
 
@@ -48,6 +52,7 @@ const ContactStyles = styled.div`
             justify-content: center;
             gap: 30px;
             background-color: transparent;
+            margin-top: 20px;
 
             .message-label{
                 width: 100%;
@@ -57,8 +62,6 @@ const ContactStyles = styled.div`
                 align-items: flex-start;
                 justify-content: center;
                 font-size: 15px;
-                color: ${({ theme: { theme } }) =>
-                theme === ThemeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_2)'};
             }
 
 
@@ -70,37 +73,33 @@ const ContactStyles = styled.div`
             align-items: flex-start;
             justify-content: center;
             font-size: 15px;
-            color: ${({ theme: { theme } }) =>
-            theme === ThemeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_2)'};
 
 
             input{
-                background-color: var(--lightBlue_2);
                 font-size: 15px;
                 width: 100%;
                 height: 100%;
                 padding: 10px;
                 border-radius: 4px;
-                border: none;
+                border: solid 1px grey;
         }
 
         
         textarea{
-                background-color: var(--lightBlue_2);
                 font-size: 15px;
                 width: 100%;
                 height: 100%;
                 padding: 10px;
                 border-radius: 4px;
-                border: none;
+                border: solid 1px grey;
         }
         
     }
 
         button{
-                background-color: var(--mediumSlateBlue);
-                color: var(--lightBlue_1);
-                width: 15%;
+                background-color: var(--cannyBlue);
+                color: white;
+                width: 30%;
                 height: 60px;
                 padding: 2px;
                 display: flex;
@@ -113,15 +112,16 @@ const ContactStyles = styled.div`
                 cursor: pointer;
 
                 &:hover{
-                    background-color: var(--darkBlue_2)
+                    background-color: blue;
                 }
         }
 
 }
 
     @media (max-width: 500px){
+        
         width: 90vw;
-        height: 550px;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -132,31 +132,35 @@ const ContactStyles = styled.div`
 
     .tag{
         width: 100%;
-        height: 70px;
+        height: 50px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        /* border-radius: 15px; */
         background-color: transparent;
 
         
     h2{
             font-size: 25px;
-            color: ${({ theme: { theme } }) =>
-            theme === ThemeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_1)'};
+            color: var(--cannyBlue);
+            text-align: center;
         }
 
         p{
-            color: ${({ theme: { theme } }) =>
-            theme === ThemeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_2)'};
             font-size: 15px;
+            text-align: center;
+            margin-top: 10px;
+
+            a{
+                font-weight: 600;
+                color: var(--black);
+            }
         }
     }
 
 
         form{
-            width: 100%;
+            width: 90%;
             height: 79%;
             display: flex;
             flex-direction: column;
@@ -164,6 +168,7 @@ const ContactStyles = styled.div`
             justify-content: center;
             gap: 30px;
             background-color: transparent;
+            margin-top: 20px;
 
             .message-label{
                 width: 100%;
@@ -173,8 +178,6 @@ const ContactStyles = styled.div`
                 align-items: flex-start;
                 justify-content: center;
                 font-size: 15px;
-                color: ${({ theme: { theme } }) =>
-                theme === ThemeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_2)'};
             }
 
 
@@ -186,38 +189,34 @@ const ContactStyles = styled.div`
             align-items: flex-start;
             justify-content: center;
             font-size: 15px;
-            color: ${({ theme: { theme } }) =>
-            theme === ThemeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_2)'};
 
 
             input{
-                background-color: var(--lightBlue_2);
                 font-size: 15px;
                 width: 100%;
                 height: 100%;
                 padding: 10px;
                 border-radius: 4px;
-                border: none;
+                border: solid 1px grey;
         }
 
         
         textarea{
-                background-color: var(--lightBlue_2);
                 font-size: 15px;
                 width: 100%;
                 height: 100%;
                 padding: 10px;
                 border-radius: 4px;
-                border: none;
+                border: solid 1px grey;
         }
         
     }
 
         button{
-                background-color: var(--mediumSlateBlue);
-                color: var(--lightBlue_1);
-                width: 35%;
-                height: 60px;
+                background-color: var(--cannyBlue);
+                color: white;
+                width: 40%;
+                height: 50px;
                 padding: 2px;
                 display: flex;
                 flex-direction: row;
@@ -229,12 +228,12 @@ const ContactStyles = styled.div`
                 cursor: pointer;
 
                 &:hover{
-                    background-color: var(--darkBlue_2)
+                    background-color: blue;
                 }
         }
 
 }
-    }
+}
 `;
 
 
@@ -248,8 +247,8 @@ function Contact(){
         return(
             <ContactStyles className="hero-section" id="contact">
                 <div className="tag">
-                    <h2>Get In Touch</h2>
-                    <p>We would love to hear from you.</p>
+                    <h2>Send A Message</h2>
+                    <p>You can also get in touch via <a href="mailto:promiseokpoto5050@gmail.com">promiseokpoto5050@gmail.com</a></p>
                 </div>
                 <form action="" method="post">
                     <label htmlFor="name">Name
@@ -265,7 +264,7 @@ function Contact(){
                         <textarea name="" id="" cols="50" rows="10"></textarea>
                     </label>
                     
-                    <button>submit</button>
+                    <button>Send Message</button>
                 </form>
             </ContactStyles>
         )
