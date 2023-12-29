@@ -203,7 +203,7 @@ const ProjectsStyles = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         margin-top: 20px;
         box-shadow: var(--boxShadow);
         padding: 10px;
