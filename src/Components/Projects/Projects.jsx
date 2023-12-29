@@ -199,7 +199,7 @@ const ProjectsStyles = styled.div`
 
     .project{
         width: 100%;
-        height: 600px;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -211,7 +211,7 @@ const ProjectsStyles = styled.div`
 
         .left-hand-side{
         width: 100%;
-        height: 40%;
+        height: 240px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -228,11 +228,11 @@ const ProjectsStyles = styled.div`
 
     .right-hand-side{
         width: 100%;
-        height: 45%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 10px;
+        gap: 20px;
 
         h3{
             font-size: 17px;
@@ -326,10 +326,6 @@ const ProjectsStyles = styled.div`
                 }
             }
             
-        }
-
-        p{
-            font-size: 15px;
         }
     }
 

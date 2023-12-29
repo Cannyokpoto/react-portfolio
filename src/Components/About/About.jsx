@@ -83,7 +83,7 @@ const AboutStyles = styled.div`
 
 
         img{
-            width: 90%;
+            width: 100%;
             height: 100%;
         }
 
