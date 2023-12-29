@@ -203,10 +203,10 @@ const ProjectsStyles = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
+        gap: 20px;
         margin-top: 20px;
         box-shadow: var(--boxShadow);
-        padding: 10px;
+        padding: 20px 10px 20px 10px;
 
 
         .left-hand-side{
