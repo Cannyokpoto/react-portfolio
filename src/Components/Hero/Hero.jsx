@@ -137,7 +137,6 @@ const HeroStyles = styled.div`
                 justify-content: flex-start;
                 gap: 10px;
                 font-size: 15px;
-                border: dashed;
             }
 
             .stack{
@@ -150,7 +149,7 @@ const HeroStyles = styled.div`
 
                 img{
                     width: 12%;
-                    height: 50%;
+                    height: 60%;
                 }
             }
         }

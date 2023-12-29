@@ -69,8 +69,8 @@ const AboutStyles = styled.div`
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-around;
-        margin-top: 50px;
-        gap: 30px;
+        margin-top: 100px;
+        gap: 15px;
 
 
     .left-hand-side{
@@ -96,7 +96,7 @@ const AboutStyles = styled.div`
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 20px;
+        gap: 10px;
 
 
         span{
