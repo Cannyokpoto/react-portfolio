@@ -215,7 +215,7 @@ const ProjectsStyles = styled.div`
 
         .left-hand-side{
         width: 100%;
-        height: 240px;
+        height: 200px;
         display: flex;
         flex-direction: column;
         align-items: center;
