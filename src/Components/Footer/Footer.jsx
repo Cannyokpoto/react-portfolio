@@ -132,7 +132,7 @@ function Footer(){
                     <a href="https://www.linkedin.com/in/promise-okpoto-8ba746231"><FaLinkedin className="my-soc" /></a>
                 </div>
                 <hr/>
-                <small>Copyright <div dangerouslySetInnerHTML={{__html: '&#169;'}}></div> 2023. All rights reserved <span>Promise Okpoto</span></small>
+                <small>Copyright <div dangerouslySetInnerHTML={{__html: '&#169;'}}></div> 2024. All rights reserved <span>Promise Okpoto</span></small>
             </FooterStyles>
         )
 };

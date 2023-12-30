@@ -22,12 +22,14 @@ const ProjectsStyles = styled.div`
         align-items: center;
         justify-content: center;
 
-        >h1{
+
+         >h1{
             color: var(--cannyBlue);
-            font-size: 30px;
+            font-size: 25px;
+            font-weight: 700;
         }
 
-        >p{
+        >h2{
             font-size: 20px;
         }
     }
@@ -39,8 +41,9 @@ const ProjectsStyles = styled.div`
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
-        margin-top: 70px;
+        margin-top: 30px;
         box-shadow: var(--boxShadow);
+        border: solid 1px grey;
 
 
         .left-hand-side{
@@ -207,6 +210,7 @@ const ProjectsStyles = styled.div`
         margin-top: 20px;
         box-shadow: var(--boxShadow);
         padding: 20px 10px 20px 10px;
+        border: solid 1px grey;
 
 
         .left-hand-side{
@@ -339,7 +343,7 @@ function Projects(){
 
                 <div className="top">
                     <h1>Projects</h1>
-                    <p>Each project is a unique piece of development.</p>
+                    <h2>Each project is a unique piece of development.</h2>
                 </div>
         
                 {

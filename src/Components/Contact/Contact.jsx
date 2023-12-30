@@ -4,7 +4,7 @@ import styled from "styled-components";
 const ContactStyles = styled.div`
 
     width: 50vw;
-    height: 550px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,16 +18,16 @@ const ContactStyles = styled.div`
         height: 70px;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         /* border-radius: 15px; */
         background-color: transparent;
 
         
-    h2{
-            font-size: 30px;
+    >span{
             color: var(--cannyBlue);
-            text-align: center;
+            font-size: 15px;
+            font-weight: 700;
         }
 
         p{
@@ -35,7 +35,7 @@ const ContactStyles = styled.div`
             text-align: center;
             margin-top: 20px;
 
-            a{
+            span{
                 font-weight: 700;
                 color: var(--black);
             }
@@ -45,14 +45,14 @@ const ContactStyles = styled.div`
 
         form{
             width: 79%;
-            height: 79%;
+            height: 100%;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
             gap: 30px;
             background-color: transparent;
-            margin-top: 20px;
+            margin-top: 70px;
 
             .message-label{
                 width: 100%;
@@ -119,12 +119,11 @@ const ContactStyles = styled.div`
 }
 
     @media (max-width: 500px){
-        
         width: 90vw;
         height: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         margin-top: 100px;
         border-radius: 15px;
@@ -135,23 +134,22 @@ const ContactStyles = styled.div`
         height: 50px;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         background-color: transparent;
 
         
-    h2{
-            font-size: 25px;
+    span{
             color: var(--cannyBlue);
-            text-align: center;
+            font-size: 15px;
+            font-weight: 700;
         }
 
         p{
             font-size: 15px;
-            text-align: center;
             margin-top: 10px;
 
-            a{
+            span{
                 font-weight: 600;
                 color: var(--black);
             }
@@ -160,15 +158,15 @@ const ContactStyles = styled.div`
 
 
         form{
-            width: 90%;
-            height: 79%;
+            width: 100%;
+            height: 100%;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
             gap: 30px;
             background-color: transparent;
-            margin-top: 20px;
+            margin-top: 50px;
 
             .message-label{
                 width: 100%;
@@ -247,10 +245,12 @@ function Contact(){
         return(
             <ContactStyles className="hero-section" id="contact">
                 <div className="tag">
-                    <h2>Send A Message</h2>
-                    <p>You can also get in touch via <a href="mailto:promiseokpoto5050@gmail.com">promiseokpoto5050@gmail.com</a></p>
+                    <span>Contact Me</span>
+                    <p>Phone: <span>+2348138957283</span></p>
+                    <p>email: <span>promiseokpoto5050@gmail.com</span></p>
                 </div>
                 <form action="" method="post">
+                    <h3>Leave A Message</h3>
                     <label htmlFor="name">Name
                         <input type="text" name="" id="name" />
                     </label>
