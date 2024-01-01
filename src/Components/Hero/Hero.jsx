@@ -176,7 +176,7 @@ const HeroStyles = styled.div`
                     }
 
                        p{
-                            font-size: 12px;
+                            font-size: 8px;
                             color: black;
                     }
                 }
