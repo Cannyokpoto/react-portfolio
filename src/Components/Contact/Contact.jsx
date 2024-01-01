@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const ContactStyles = styled.div`
 
@@ -96,7 +98,7 @@ const ContactStyles = styled.div`
         
     }
 
-        button{
+        .submit{
                 background-color: var(--cannyBlue);
                 color: white;
                 width: 30%;
@@ -210,7 +212,7 @@ const ContactStyles = styled.div`
         
     }
 
-        button{
+        .submit{
                 background-color: var(--cannyBlue);
                 color: white;
                 width: 50%;
@@ -242,6 +244,23 @@ const ContactStyles = styled.div`
 
 function Contact(){
 
+    const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_gdxwhaj', 
+                'template_496jb5h', 
+                form.current, 
+                'k2DFz0De-15n0uIo6')
+      .then((result) => {
+          console.log(result.text);
+          return alert("message sent successfully!")
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
         return(
             <ContactStyles className="hero-section" id="contact">
                 <div className="tag">
@@ -249,22 +268,22 @@ function Contact(){
                     <p>Phone: <span>+2348138957283</span></p>
                     <p>email: <span>promiseokpoto5050@gmail.com</span></p>
                 </div>
-                <form action="" method="post">
+                <form ref={form} onSubmit={sendEmail}>
                     <h3>Leave A Message</h3>
                     <label htmlFor="name">Name
-                        <input type="text" name="" id="name" />
+                        <input type="text" name="user_name" id="name" />
                     </label>
                     <label htmlFor="email">Email
-                        <input type="email" name="" id="email" />
+                        <input type="email" name="user_email" id="email" />
                     </label>
                     <label htmlFor="subject">Subject
-                        <input type="text" name="" id="email" />
+                        <input type="text" name="subject" id="subject" />
                     </label>
                     <label htmlFor="message" className="message-label">Message
-                        <textarea name="" id="" cols="50" rows="10"></textarea>
+                        <textarea name="message" id="message" cols="50" rows="10"></textarea>
                     </label>
                     
-                    <button>Send Message</button>
+                    <input type="submit" value="Send Message" className="submit" />
                 </form>
             </ContactStyles>
         )
