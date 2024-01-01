@@ -29,14 +29,14 @@ const HeroStyles = styled.div`
             }
         }
 
-        p{
+        >p{
             font-size: 20px;
             color: var(--darkGrey);
         }
 
         .tech-stack{
             width: 100%;
-            height: 55px;
+            height: 70px;
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -62,9 +62,23 @@ const HeroStyles = styled.div`
                 align-items: center;
                 justify-content: space-between;
 
-                img{
-                    width: 9%;
-                    height: 40%;
+                span{
+                    width: 20%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+
+                        img{
+                        width: 100%;
+                        height: 60%;
+                    }
+
+                       p{
+                            font-size: 14px;
+                            color: black;
+                    }
                 }
             }
         }
@@ -145,11 +159,26 @@ const HeroStyles = styled.div`
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                justify-content: space-around;
+                justify-content: space-between;
 
-                img{
-                    width: 12%;
-                    height: 70%;
+
+                span{
+                    width: 15%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+
+                        img{
+                        width: 100%;
+                        height: 60%;
+                    }
+
+                       p{
+                            font-size: 12px;
+                            color: black;
+                    }
                 }
             }
         }
@@ -186,10 +215,25 @@ function Hero(){
                         </div>
 
                         <div className="stack">
-                            <img src={PHOTOS.html} alt="html" />
-                            <img src={PHOTOS.css} alt="css" />
-                            <img src={PHOTOS.js} alt="js" />
-                            <img src={PHOTOS.reactjs} alt="react" />
+                            <span>
+                                <img src={PHOTOS.html} alt="html" />
+                                <p>HTML</p>
+                            </span>
+                            <span>
+                                <img src={PHOTOS.css} alt="css" />
+                                <p>CSS</p>
+                            </span>
+                            <span>
+                                <img src={PHOTOS.js} alt="js" />
+                                <p>javaScript</p>
+                            </span>
+                            <span>
+                                <img src={PHOTOS.reactjs} alt="react" />
+                                <p>ReactJS</p>
+                            </span>
+                            
+                            
+                            
                         </div>
                     </div>
                 </div>
