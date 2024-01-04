@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ContactStyles = styled.div`
 
@@ -255,12 +257,17 @@ function Contact(){
                 'k2DFz0De-15n0uIo6')
       .then((result) => {
           console.log(result.text);
-          return alert("message sent successfully!")
       }, (error) => {
           console.log(error.text);
       });
 
       e.target.reset();
+  };
+
+  const Toast = () =>{
+    toast.success("Message Sent.", {
+        position: toast.POSITION.TOP_CENTER
+      });
   };
 
         return(
@@ -285,8 +292,9 @@ function Contact(){
                         <textarea name="message" id="message" cols="50" rows="10"></textarea>
                     </label>
                     
-                    <input type="submit" value="Send Message" className="submit" />
+                    <input type="submit" value="Send Message" className="submit" onClick={e => Toast()} />
                 </form>
+                <ToastContainer />
             </ContactStyles>
         )
 };
