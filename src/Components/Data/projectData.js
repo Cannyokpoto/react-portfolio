@@ -23,13 +23,7 @@ const projectData = [
     demo: "https://get-fit-bice.vercel.app/",
     description: "At Get Fit, we're not just a fitness center; we're a community that is passionate about empowering individuals to achieve their health and wellness goals. Our gym is more than just a place to work out; it's a space where you can challenge yourself, connect with others, and transform your life.",
   },
-  {
-    image: PHOTOS.project4,
-    title: "ENERGY MALL",
-    code: "https://github.com/Cannyokpoto/energy-mall",
-    demo: "https://energy-mall.vercel.app/",
-    description: "Energy Mall is a brand harnessing the power of the sun to create a greener, more sustainable world. As a leading provider of solar solutions, we are committed to delivering cutting-edge technology, exceptional service, and a brighter tomorrow.",
-  },
+
 
   {
     image: PHOTOS.project5,
